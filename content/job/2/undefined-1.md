@@ -33,17 +33,54 @@
 
 ### 보상 목록
 
-<table><thead><tr><th width="418.04351806640625">아이템</th><th width="77.565185546875">갯수</th><th>확률</th></tr></thead><tbody><tr><td>랜덤 브론즈 물고기</td><td>2</td><td>70</td></tr><tr><td>브론즈 추가 미끼(5회)</td><td>1</td><td>30</td></tr></tbody></table>
+<table>  <thead>    <tr>
+      <th width="418.04351806640625">아이템</th>
+      <th width="77.565185546875">갯수</th>
+      <th>확률</th>
+    </tr>
+</thead>  <tbody>    <tr>
+      <td>랜덤 브론즈 물고기</td>
+      <td>2</td>
+      <td>70</td>
+    </tr>
+<tr>
+      <td>브론즈 추가 미끼(5회)</td>
+      <td>1</td>
+      <td>30</td>
+    </tr>
+</tbody>
+</table>
 
 ### 제작법
 
 <figure><img src="../../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
-|       |     |       |
-| ----- | --- | ----- |
-| 구리 블록 | 실   | 구리 블록 |
-| 실     | 열대어 | 실     |
-| 구리 블록 | 실   | 구리 블록 |
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>구리 블록</td>
+      <td>실</td>
+      <td>구리 블록</td>
+    </tr>
+    <tr>
+      <td>실</td>
+      <td>열대어</td>
+      <td>실</td>
+    </tr>
+    <tr>
+      <td>구리 블록</td>
+      <td>실</td>
+      <td>구리 블록</td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 
 {% tab title="실버" %}
@@ -54,17 +91,59 @@
 
 ### 보상 목록
 
-<table><thead><tr><th width="418.04351806640625">아이템</th><th width="77.565185546875">갯수</th><th>확률</th></tr></thead><tbody><tr><td>랜덤 브론즈 물고기</td><td>2</td><td>60</td></tr><tr><td>랜덤 실버 물고기</td><td>2</td><td>30</td></tr><tr><td>실버 추가 미끼(5회)</td><td>1</td><td>10</td></tr></tbody></table>
+<table>  <thead>    <tr>
+      <th width="418.04351806640625">아이템</th>
+      <th width="77.565185546875">갯수</th>
+      <th>확률</th>
+    </tr>
+</thead>  <tbody>    <tr>
+      <td>랜덤 브론즈 물고기</td>
+      <td>2</td>
+      <td>60</td>
+    </tr>
+<tr>
+      <td>랜덤 실버 물고기</td>
+      <td>2</td>
+      <td>30</td>
+    </tr>
+<tr>
+      <td>실버 추가 미끼(5회)</td>
+      <td>1</td>
+      <td>10</td>
+    </tr>
+</tbody>
+</table>
 
 ### 제작법
 
 <figure><img src="../../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
 
-|      |     |      |
-| ---- | --- | ---- |
-| 철 블록 | 실   | 철 블록 |
-| 실    | 열대어 | 실    |
-| 철 블록 | 실   | 철 블록 |
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>철 블록</td>
+      <td>실</td>
+      <td>철 블록</td>
+    </tr>
+    <tr>
+      <td>실</td>
+      <td>열대어</td>
+      <td>실</td>
+    </tr>
+    <tr>
+      <td>철 블록</td>
+      <td>실</td>
+      <td>철 블록</td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 
 {% tab title="골드" %}
@@ -75,17 +154,69 @@
 
 ### 보상 목록
 
-<table><thead><tr><th width="418.04351806640625">아이템</th><th width="77.565185546875">갯수</th><th>확률</th></tr></thead><tbody><tr><td>랜덤 브론즈 물고기</td><td>2</td><td>70%</td></tr><tr><td>랜덤 실버 물고기</td><td>2</td><td>30%</td></tr><tr><td>랜덤 골드 물고기</td><td>1</td><td>11%</td></tr><tr><td>랜덤 1티어 주괴</td><td>1</td><td>4%</td></tr><tr><td>골드 추가 미끼(5회)</td><td>1</td><td>10%</td></tr></tbody></table>
+<table>  <thead>    <tr>
+      <th width="418.04351806640625">아이템</th>
+      <th width="77.565185546875">갯수</th>
+      <th>확률</th>
+    </tr>
+</thead>  <tbody>    <tr>
+      <td>랜덤 브론즈 물고기</td>
+      <td>2</td>
+      <td>70%</td>
+    </tr>
+<tr>
+      <td>랜덤 실버 물고기</td>
+      <td>2</td>
+      <td>30%</td>
+    </tr>
+<tr>
+      <td>랜덤 골드 물고기</td>
+      <td>1</td>
+      <td>11%</td>
+    </tr>
+<tr>
+      <td>랜덤 1티어 주괴</td>
+      <td>1</td>
+      <td>4%</td>
+    </tr>
+<tr>
+      <td>골드 추가 미끼(5회)</td>
+      <td>1</td>
+      <td>10%</td>
+    </tr>
+</tbody>
+</table>
 
 ### 제작법
 
 <figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
-|      |     |      |
-| ---- | --- | ---- |
-| 금 블록 | 실   | 금 블록 |
-| 실    | 열대어 | 실    |
-| 금 블록 | 실   | 금 블록 |
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>금 블록</td>
+      <td>실</td>
+      <td>금 블록</td>
+    </tr>
+    <tr>
+      <td>실</td>
+      <td>열대어</td>
+      <td>실</td>
+    </tr>
+    <tr>
+      <td>금 블록</td>
+      <td>실</td>
+      <td>금 블록</td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 
 {% tab title="다이아몬드" %}
@@ -96,17 +227,69 @@
 
 ### 보상 목록
 
-<table><thead><tr><th width="418.04351806640625">아이템</th><th width="77.565185546875">갯수</th><th>확률</th></tr></thead><tbody><tr><td>랜덤 실버 물고기</td><td>2</td><td>45%</td></tr><tr><td>랜덤 골드 물고기</td><td>1</td><td>35%</td></tr><tr><td>랜덤 다이아 물고기</td><td>1</td><td>10%</td></tr><tr><td>랜덤 1티어 주괴</td><td>1</td><td>5%</td></tr><tr><td>다이아 추가 미끼(3회)</td><td>1</td><td>5%</td></tr></tbody></table>
+<table>  <thead>    <tr>
+      <th width="418.04351806640625">아이템</th>
+      <th width="77.565185546875">갯수</th>
+      <th>확률</th>
+    </tr>
+</thead>  <tbody>    <tr>
+      <td>랜덤 실버 물고기</td>
+      <td>2</td>
+      <td>45%</td>
+    </tr>
+<tr>
+      <td>랜덤 골드 물고기</td>
+      <td>1</td>
+      <td>35%</td>
+    </tr>
+<tr>
+      <td>랜덤 다이아 물고기</td>
+      <td>1</td>
+      <td>10%</td>
+    </tr>
+<tr>
+      <td>랜덤 1티어 주괴</td>
+      <td>1</td>
+      <td>5%</td>
+    </tr>
+<tr>
+      <td>다이아 추가 미끼(3회)</td>
+      <td>1</td>
+      <td>5%</td>
+    </tr>
+</tbody>
+</table>
 
 ### 제작법
 
 <figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
-|          |     |          |
-| -------- | --- | -------- |
-| 다이아몬드 블록 | 실   | 다이아몬드 블록 |
-| 실        | 열대어 | 실        |
-| 다이아몬드 블록 | 실   | 다이아몬드 블록 |
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>다이아몬드 블록</td>
+      <td>실</td>
+      <td>다이아몬드 블록</td>
+    </tr>
+    <tr>
+      <td>실</td>
+      <td>열대어</td>
+      <td>실</td>
+    </tr>
+    <tr>
+      <td>다이아몬드 블록</td>
+      <td>실</td>
+      <td>다이아몬드 블록</td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 
 {% tab title="플래티넘" %}
@@ -117,17 +300,74 @@
 
 ### 보상 목록
 
-<table><thead><tr><th width="418.04351806640625">아이템</th><th width="77.565185546875">갯수</th><th>확률</th></tr></thead><tbody><tr><td>랜덤 실버 물고기</td><td>2</td><td>45%</td></tr><tr><td>랜덤 골드 물고기</td><td>1</td><td>25%</td></tr><tr><td>랜덤 다이아 물고기</td><td>1</td><td>17%</td></tr><tr><td>랜덤 플래티넘 물고기</td><td>1</td><td>8%</td></tr><tr><td>랜덤 2티어 주괴</td><td>1</td><td>3%</td></tr><tr><td>플래티넘 추가 미끼(3회)</td><td>1</td><td>2%</td></tr></tbody></table>
+<table>  <thead>    <tr>
+      <th width="418.04351806640625">아이템</th>
+      <th width="77.565185546875">갯수</th>
+      <th>확률</th>
+    </tr>
+</thead>  <tbody>    <tr>
+      <td>랜덤 실버 물고기</td>
+      <td>2</td>
+      <td>45%</td>
+    </tr>
+<tr>
+      <td>랜덤 골드 물고기</td>
+      <td>1</td>
+      <td>25%</td>
+    </tr>
+<tr>
+      <td>랜덤 다이아 물고기</td>
+      <td>1</td>
+      <td>17%</td>
+    </tr>
+<tr>
+      <td>랜덤 플래티넘 물고기</td>
+      <td>1</td>
+      <td>8%</td>
+    </tr>
+<tr>
+      <td>랜덤 2티어 주괴</td>
+      <td>1</td>
+      <td>3%</td>
+    </tr>
+<tr>
+      <td>플래티넘 추가 미끼(3회)</td>
+      <td>1</td>
+      <td>2%</td>
+    </tr>
+</tbody>
+</table>
 
 ### 제작법
 
 <figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
-|       |     |       |
-| ----- | --- | ----- |
-| 백금 블록 | 실   | 백금 블록 |
-| 실     | 열대어 | 실     |
-| 백금 블록 | 실   | 백금 블록 |
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>백금 블록</td>
+      <td>실</td>
+      <td>백금 블록</td>
+    </tr>
+    <tr>
+      <td>실</td>
+      <td>열대어</td>
+      <td>실</td>
+    </tr>
+    <tr>
+      <td>백금 블록</td>
+      <td>실</td>
+      <td>백금 블록</td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 
 {% tab title="신화" %}
@@ -138,17 +378,74 @@
 
 ### 보상 목록
 
-<table><thead><tr><th width="418.04351806640625">아이템</th><th width="77.565185546875">갯수</th><th>확률</th></tr></thead><tbody><tr><td>랜덤 골드 물고기</td><td>1</td><td>45%</td></tr><tr><td>랜덤 다이아 물고기</td><td>1</td><td>30%</td></tr><tr><td>랜덤 플래티넘 물고기</td><td>1</td><td>16%</td></tr><tr><td>랜덤 신화물고기</td><td>1</td><td>4.5%</td></tr><tr><td>랜덤 2티어 주괴</td><td>1</td><td>4%</td></tr><tr><td>신화 추가 미끼(3회)</td><td>1</td><td>0.5%</td></tr></tbody></table>
+<table>  <thead>    <tr>
+      <th width="418.04351806640625">아이템</th>
+      <th width="77.565185546875">갯수</th>
+      <th>확률</th>
+    </tr>
+</thead>  <tbody>    <tr>
+      <td>랜덤 골드 물고기</td>
+      <td>1</td>
+      <td>45%</td>
+    </tr>
+<tr>
+      <td>랜덤 다이아 물고기</td>
+      <td>1</td>
+      <td>30%</td>
+    </tr>
+<tr>
+      <td>랜덤 플래티넘 물고기</td>
+      <td>1</td>
+      <td>16%</td>
+    </tr>
+<tr>
+      <td>랜덤 신화물고기</td>
+      <td>1</td>
+      <td>4.5%</td>
+    </tr>
+<tr>
+      <td>랜덤 2티어 주괴</td>
+      <td>1</td>
+      <td>4%</td>
+    </tr>
+<tr>
+      <td>신화 추가 미끼(3회)</td>
+      <td>1</td>
+      <td>0.5%</td>
+    </tr>
+</tbody>
+</table>
 
 ### 제작법
 
 <figure><img src="../../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
 
-|          |     |          |
-| -------- | --- | -------- |
-| 싹틔우는 자수정 | 실   | 싹틔우는 자수정 |
-| 실        | 열대어 | 실        |
-| 싹틔우는 자수정 | 실   | 싹틔우는 자수정 |
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>싹틔우는 자수정</td>
+      <td>실</td>
+      <td>싹틔우는 자수정</td>
+    </tr>
+    <tr>
+      <td>실</td>
+      <td>열대어</td>
+      <td>실</td>
+    </tr>
+    <tr>
+      <td>싹틔우는 자수정</td>
+      <td>실</td>
+      <td>싹틔우는 자수정</td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 {% endtabs %}
 
