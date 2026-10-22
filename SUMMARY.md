@@ -1,6 +1,7 @@
 # Table of contents
 
 * [🐬 개요](README.md)
+* [📢 패치노트](patchnote.md)
 
 ## \[ GUIDE ]
 
