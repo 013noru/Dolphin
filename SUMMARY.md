@@ -1,7 +1,13 @@
 # Table of contents
 
 * [🐬 개요](README.md)
+* [📒 서버 규정](info/rule.md)
 * [📢 패치노트](patchnote.md)
+* [❓ 자주 하는 질문](info/question.md)
+* [❗ 자주 사용하는 명령어](info/command.md)
+* [ADMIN](info/admin/README.md)
+  * [수정 내역](info/admin/undefined.md)
+  * [관리용 명령어](info/admin/undefined-1.md)
 
 ## \[ GUIDE ]
 
@@ -23,15 +29,6 @@
 * [🎁 보상 시스템](guide/10..md)
 * [🛠️ 편의 기능](guide/11..md)
 * [👑 VIP 전용 혜택](guide/12..md)
-
-## 📑 서버 정보 <a href="#info" id="info"></a>
-
-* [📒 서버 규정](info/rule.md)
-* [❓ 자주 하는 질문](info/question.md)
-* [❗ 자주 사용하는 명령어](info/command.md)
-* [ADMIN](info/admin/README.md)
-  * [수정 내역](info/admin/undefined.md)
-  * [관리용 명령어](info/admin/undefined-1.md)
 
 ## 📖 컨텐츠 <a href="#content" id="content"></a>
 
