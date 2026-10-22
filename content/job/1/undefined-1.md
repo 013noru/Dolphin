@@ -1,377 +1,608 @@
-# 연금술사
+# ⚗️ 연금술사
 
-### 양조 재료 목록
+커스텀 양조대를 통해 특수 포션, 마나/체력 회복제, 농축 및 연장 포션을 제조하는 전문 제작직입니다.
 
-* 자세한 사항은 [이곳](../2/undefined-3.md#undefined-2)을 참조해주세요.
-* 기타 재료 - 돌고래 꼬리, 에메랄드 블록, 레드스톤 **블록**, **발광석**
+---
 
-### 포션 레시피
+### 📌 기본 양조 시스템 & 규칙
+
+* **전용 양조대**: CraftEngine 커스텀 블록을 우클릭하여 전용 GUI를 열고 양조합니다 (**연금술사 Lv. 1 이상** 필요).
+* **연료 불필요 & 피로도 소모**: 블레이즈 가루 대신 **연금술사 피로도(Fatigue)**를 소모하여 양조를 진행합니다.
+* **취소 시 100% 환불**: 양조 도중 아이템을 빼거나 양조대가 파괴되면 **소모했던 피로도가 전액 자동 환불**됩니다.
+* **3병 동시 양조 (필수 팁)**: 하단 3개 슬롯(30, 31, 32번)에 포션 3병을 모두 채우면, **재료 1개와 1회분 피로도로 3병을 동시에 양조**할 수 있어 효율이 3배가 됩니다!
+* **포션 64개 겹치기**: 모든 커스텀 포션은 인벤토리 한 칸에 **최대 64개까지 겹쳐서** 보관 및 복용이 가능합니다.
+* **복용 시 치유 경험치**: 커스텀 포션을 마실 때마다 **AuraSkills 치유(Healing) 경험치**를 획득합니다 (1단계: 30~50 EXP / 2단계: 200 EXP).
+
+---
+
+### 🧪 양조 재료 목록 & 드랍 몬스터
+
+<table>
+  <thead>
+    <tr>
+      <th width="150">재료 이름</th>
+      <th width="220">획득처 (드랍 몬스터)</th>
+      <th>용도 및 특징</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>정령의 물방울</strong></td>
+      <td>워든</td>
+      <td>정령의 호흡 재료</td>
+    </tr>
+    <tr>
+      <td><strong>오염된 코어</strong></td>
+      <td>좀비, 드라운드, 허스크, 좀비 주민, 자이언트 등</td>
+      <td>오염된 투지 재료</td>
+    </tr>
+    <tr>
+      <td><strong>끝없는 그림자</strong></td>
+      <td>크리퍼</td>
+      <td>그림자 망토 재료</td>
+    </tr>
+    <tr>
+      <td><strong>요정의 눈물</strong></td>
+      <td>벡스, 알레이</td>
+      <td>요정의 축복 재료</td>
+    </tr>
+    <tr>
+      <td><strong>시간의 샘물</strong></td>
+      <td>가디언, 엘더 가디언</td>
+      <td>시간 가속 재료</td>
+    </tr>
+    <tr>
+      <td><strong>황금빛 잎사귀</strong></td>
+      <td>마녀</td>
+      <td>황금 방어막 / 빛나는 체력 포션 재료</td>
+    </tr>
+    <tr>
+      <td><strong>불사조의 깃털</strong></td>
+      <td>벡스, 알레이</td>
+      <td>불사조의 가호 재료</td>
+    </tr>
+    <tr>
+      <td><strong>병에 담긴 번개</strong></td>
+      <td>소환사, 변명자, 약탈자</td>
+      <td>번개 걸음 재료</td>
+    </tr>
+    <tr>
+      <td><strong>세계수의 열매</strong></td>
+      <td>특수 획득</td>
+      <td>세계수의 활력 재료</td>
+    </tr>
+    <tr>
+      <td><strong>쇳가루</strong></td>
+      <td>피글린, 호글린</td>
+      <td>강철 갑옷 재료</td>
+    </tr>
+    <tr>
+      <td><strong>쇠구슬</strong></td>
+      <td>스켈레톤</td>
+      <td>묵직한 인내 재료</td>
+    </tr>
+    <tr>
+      <td><strong>영혼의 꽃</strong></td>
+      <td>가스트</td>
+      <td>영혼의 시야 재료</td>
+    </tr>
+    <tr>
+      <td><strong>나비 날개</strong></td>
+      <td>꿀벌</td>
+      <td>나비의 춤 재료</td>
+    </tr>
+    <tr>
+      <td><strong>금빛 영혼</strong></td>
+      <td>블레이즈, 브리즈</td>
+      <td>태양의 치유 재료</td>
+    </tr>
+    <tr>
+      <td><strong>만드라고라</strong></td>
+      <td>마녀</td>
+      <td>만드라고라 추출액 재료</td>
+    </tr>
+    <tr>
+      <td><strong>천둥새의 깃털</strong></td>
+      <td>벡스, 알레이</td>
+      <td>천둥새의 비상 재료</td>
+    </tr>
+    <tr>
+      <td><strong>베히모스의 분노</strong></td>
+      <td>파괴수</td>
+      <td>베히모스의 분노 재료</td>
+    </tr>
+    <tr>
+      <td><strong>히드라의 독</strong></td>
+      <td>거미, 동굴 거미</td>
+      <td>맹독성 투지 재료</td>
+    </tr>
+    <tr>
+      <td><strong>정교한 철제 부품</strong></td>
+      <td>엔더 드래곤, 엔더맨, 엔더마이트, 셜커 등</td>
+      <td>철벽의 묘약 재료</td>
+    </tr>
+    <tr>
+      <td><strong>돌고래 꼬리</strong></td>
+      <td>돌고래</td>
+      <td>돌고래의 의지 재료</td>
+    </tr>
+    <tr>
+      <td><strong>에메랄드 블록</strong></td>
+      <td>광물 조합</td>
+      <td>행운의 물약 재료</td>
+    </tr>
+    <tr>
+      <td><strong>발광석 블록</strong></td>
+      <td>블록 형태 (가루 X)</td>
+      <td>2단계 강화(농축) 촉매 (효과 레벨 상승)</td>
+    </tr>
+    <tr>
+      <td><strong>레드스톤 블록</strong></td>
+      <td>블록 형태 (가루 X)</td>
+      <td>2단계 시간 연장(안정화) 촉매 (시간 1.5~2배 연장)</td>
+    </tr>
+    <tr>
+      <td><strong>원석 스톤류</strong></td>
+      <td>블러드/마나/썬/문 스톤</td>
+      <td>체력 / 마나 / 태양 / 달빛의 포션 주재료</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+### 📜 포션 레시피 총람
 
 {% tabs %}
-{% tab title="일반 포션" %}
-* 일반 포션은 커스텀 양조기에서 어색한 물약에 재료를 넣으면 제조 가능합니다.
-* 어색한 물약은 양조기에서 물병에 네더 사마귀로 양조하시면 제조 가능합니다.
+{% tab title="일반 포션 (1단계)" %}
+* **양조 조건**: 커스텀 양조기에서 **어색한 포션**에 특수 재료를 넣고 양조합니다.
+* **공통 수치**: 소모 피로도 4 / 연금술사 직업 EXP 100
 
 <table>
   <thead>
     <tr>
-      <th width="229.26080322265625">이름</th>
-      <th width="184.3043212890625">재료</th>
-      <th>효과</th>
+      <th width="150">이름</th>
+      <th width="150">재료</th>
+      <th width="90">양조시간</th>
+      <th>효과 및 지속 시간</th>
+      <th width="85">복용 EXP</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>정령의 호흡</td>
+      <td><strong>정령의 호흡</strong></td>
       <td>정령의 물방울</td>
-      <td>수중 호흡, 야간 투시 (10분)</td>
+      <td>20초</td>
+      <td>수중 호흡 I (10분), 야간 투시 I (10분)</td>
+      <td>30</td>
     </tr>
     <tr>
-      <td>오염된 투지</td>
+      <td><strong>오염된 투지</strong></td>
       <td>오염된 코어</td>
-      <td>힘 1, 신속 1 (8분) / 위더 1 (5초)</td>
+      <td>30초</td>
+      <td>힘 I (8분), 신속 I (8분), <font color="red">위더 I (5초)</font></td>
+      <td>30</td>
     </tr>
     <tr>
-      <td>그림자 망토</td>
+      <td><strong>그림자 망토</strong></td>
       <td>끝없는 그림자</td>
-      <td>투명화, 신속 1 (10분)</td>
+      <td>40초</td>
+      <td>투명화 I (10분), 신속 I (10분)</td>
+      <td>40</td>
     </tr>
     <tr>
-      <td>요정의 축복</td>
+      <td><strong>요정의 축복</strong></td>
       <td>요정의 눈물</td>
-      <td>재생 1, 흡수 1 (3분)</td>
+      <td>20초</td>
+      <td>재생 I (3분), 흡수 I (3분)</td>
+      <td>30</td>
     </tr>
     <tr>
-      <td>시간 가속</td>
+      <td><strong>시간 가속</strong></td>
       <td>시간의 샘물</td>
-      <td>성급함 1, 신속 1 (10분)</td>
+      <td>40초</td>
+      <td>성급함 I (10분), 신속 I (10분)</td>
+      <td>40</td>
     </tr>
     <tr>
-      <td>황금 방어막</td>
+      <td><strong>황금 방어막</strong></td>
       <td>황금빛 잎사귀</td>
-      <td>흡수 1 (10분) / 저항 1 (3분)</td>
+      <td>30초</td>
+      <td>흡수 I (10분), 저항 I (3분)</td>
+      <td>30</td>
     </tr>
     <tr>
-      <td>불사조의 가호</td>
+      <td><strong>불사조의 가호</strong></td>
       <td>불사조의 깃털</td>
-      <td>화염 저항 (15분) / 재생 1 (1분)</td>
+      <td>45초</td>
+      <td>화염 저항 I (15분), 재생 I (1분)</td>
+      <td>40</td>
     </tr>
     <tr>
-      <td>번개 걸음</td>
+      <td><strong>번개 걸음</strong></td>
       <td>병에 담긴 번개</td>
-      <td>신속 1, 도약 강화 1 (10분)</td>
+      <td>30초</td>
+      <td>신속 I (10분), 도약 강화 I (10분)</td>
+      <td>30</td>
     </tr>
     <tr>
-      <td>세계수의 활력</td>
+      <td><strong>세계수의 활력</strong></td>
       <td>세계수의 열매</td>
-      <td>생명력 강화 1 (10분) / 재생 1 (2분)</td>
+      <td>50초</td>
+      <td>생명력 강화 I (10분), 재생 I (2분)</td>
+      <td>50</td>
     </tr>
     <tr>
-      <td>강철 갑옷</td>
+      <td><strong>강철 갑옷</strong></td>
       <td>쇳가루</td>
-      <td>저항 1, 화염 저항 (8분)</td>
+      <td>20초</td>
+      <td>저항 I (8분), 화염 저항 I (8분)</td>
+      <td>30</td>
     </tr>
     <tr>
-      <td>묵직한 인내</td>
+      <td><strong>묵직한 인내</strong></td>
       <td>쇠구슬</td>
-      <td>저항 1, 생명력 강화 1, 구속 1 (10분)</td>
+      <td>30초</td>
+      <td>저항 I (10분), 생명력 강화 I (10분), <font color="red">구속 I (10분)</font></td>
+      <td>30</td>
     </tr>
     <tr>
-      <td>영혼의 시야</td>
+      <td><strong>영혼의 시야</strong></td>
       <td>영혼의 꽃</td>
-      <td>야간 투시, 수중 호흡 (15분) / 발광 (1분)</td>
+      <td>20초</td>
+      <td>야간 투시 I (15분), 수중 호흡 I (15분), 발광 I (1분)</td>
+      <td>30</td>
     </tr>
     <tr>
-      <td>나비의 춤</td>
+      <td><strong>나비의 춤</strong></td>
       <td>나비 날개</td>
-      <td>느린 낙하, 도약 강화 1, 신속 1 (8분)</td>
+      <td>20초</td>
+      <td>느린 낙하 I (8분), 도약 강화 I (8분), 신속 I (8분)</td>
+      <td>30</td>
     </tr>
     <tr>
-      <td>태양의 치유</td>
+      <td><strong>태양의 치유</strong></td>
       <td>금빛 영혼</td>
-      <td>즉시 치유 2 / 흡수 1 (3분) / 재생 1 (1분)</td>
+      <td>45초</td>
+      <td>즉시 치유 II (즉발), 흡수 I (3분), 재생 I (1분)</td>
+      <td>40</td>
     </tr>
     <tr>
-      <td>만드라고라 추출액</td>
+      <td><strong>만드라고라 추출액</strong></td>
       <td>만드라고라</td>
-      <td>재생 1, 흡수 1 (5분) / 멀미 (5초)</td>
+      <td>40초</td>
+      <td>재생 I (5분), 흡수 I (5분), <font color="red">멀미 I (5초)</font></td>
+      <td>40</td>
     </tr>
     <tr>
-      <td>천둥새의 비상</td>
+      <td><strong>천둥새의 비상</strong></td>
       <td>천둥새의 깃털</td>
-      <td>신속 1, 성급함 1 (10분)</td>
+      <td>45초</td>
+      <td>신속 I (10분), 성급함 I (10분)</td>
+      <td>40</td>
     </tr>
     <tr>
-      <td>베히모스의 분노</td>
+      <td><strong>베히모스의 분노</strong></td>
       <td>베히모스의 뿔</td>
-      <td>힘 1, 저항 1, 생명력 강화 1 (8분)</td>
+      <td>50초</td>
+      <td>힘 I (8분), 저항 I (8분), 생명력 강화 I (8분)</td>
+      <td>50</td>
     </tr>
     <tr>
-      <td>맹독성 투지</td>
+      <td><strong>맹독성 투지</strong></td>
       <td>히드라의 독</td>
-      <td>힘 1, 신속 1, 저항 1 (8분) / 독 1 (10초)</td>
+      <td>45초</td>
+      <td>힘 I (8분), 신속 I (8분), 저항 I (8분), <font color="red">독 I (10초)</font></td>
+      <td>40</td>
     </tr>
     <tr>
-      <td>철벽의 묘약</td>
+      <td><strong>철벽의 묘약</strong></td>
       <td>정교한 철제 부품</td>
-      <td>저항 1, 흡수 1, 구속 1 (10분)</td>
+      <td>40초</td>
+      <td>저항 I (10분), 흡수 I (10분), <font color="red">구속 I (10분)</font></td>
+      <td>40</td>
     </tr>
     <tr>
-      <td>행운의 물약</td>
+      <td><strong>행운의 물약</strong></td>
       <td>에메랄드 블록</td>
-      <td>행운 5 (10분)</td>
+      <td>40초</td>
+      <td><strong>행운 V (10분)</strong></td>
+      <td>40</td>
     </tr>
     <tr>
-      <td>돌고래의 의지</td>
+      <td><strong>돌고래의 의지</strong></td>
       <td>돌고래 꼬리</td>
-      <td>돌고래의 가호 1, 수중 호흡 1 (10분)</td>
+      <td>30초</td>
+      <td>돌고래의 우아함 I (10분), 수중 호흡 I (10분)</td>
+      <td>30</td>
     </tr>
   </tbody>
 </table>
 {% endtab %}
 
-{% tab title="효과 증폭" %}
-* 커스텀 양조기에서 일반 포션에 발광석(가루 X)을 넣으시면 됩니다.
+{% tab title="효과 증폭 (농축형)" %}
+* **양조 조건**: 1단계 특수 포션 + **발광석 블록 (`GLOWSTONE`)** 투입 *(가루 사용 불가)*
+* **공통 수치**: 양조 15초 / **소모 피로도 1** / 직업 EXP 150 / 복용 시 치유 EXP 200
+* **특징**: 지속 시간이 75%로 단축되는 대신 버프 등급이 **2레벨(행운은 7레벨)**로 대폭 강화됩니다. *(※ 돌고래의 의지는 강화형 없음)*
 
 <table>
   <thead>
     <tr>
-      <th width="229.26080322265625">이름</th>
-      <th width="184.3043212890625">재료</th>
-      <th>효과</th>
+      <th width="180">강화 포션명</th>
+      <th width="150">베이스 포션</th>
+      <th>강화된 효과 및 지속 시간</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>농축된 정령의 호흡</td>
-      <td>기반 포션 + 발광석</td>
-      <td>수중 호흡, 야간 투시 (7분 30초)</td>
+      <td><strong>농축된 정령의 호흡</strong></td>
+      <td>정령의 호흡</td>
+      <td>수중 호흡 I (7분 30초), 야간 투시 I (7분 30초)</td>
     </tr>
     <tr>
-      <td>짙어진 투지</td>
-      <td>기반 포션 + 발광석</td>
-      <td>힘 2, 신속 2 (6분) / 위더 1 (5초)</td>
+      <td><strong>짙어진 투지</strong></td>
+      <td>오염된 투지</td>
+      <td><strong>힘 II (6분), 신속 II (6분)</strong>, <font color="red">위더 I (5초)</font></td>
     </tr>
     <tr>
-      <td>농축된 그림자 망토</td>
-      <td>기반 포션 + 발광석</td>
-      <td>투명화, 신속 2 (7분 30초)</td>
+      <td><strong>농축된 그림자 망토</strong></td>
+      <td>그림자 망토</td>
+      <td>투명화 I (7분 30초), <strong>신속 II (7분 30초)</strong></td>
     </tr>
     <tr>
-      <td>농축된 요정의 축복</td>
-      <td>기반 포션 + 발광석</td>
-      <td>재생 2, 흡수 2 (2분 15초)</td>
+      <td><strong>농축된 요정의 축복</strong></td>
+      <td>요정의 축복</td>
+      <td><strong>재생 II (2분 15초), 흡수 II (2분 15초)</strong></td>
     </tr>
     <tr>
-      <td>농축된 시간 가속</td>
-      <td>기반 포션 + 발광석 </td>
-      <td>성급함 2, 신속 2 (7분 30초)</td>
+      <td><strong>농축된 시간 가속</strong></td>
+      <td>시간 가속</td>
+      <td><strong>성급함 II (7분 30초), 신속 II (7분 30초)</strong></td>
     </tr>
     <tr>
-      <td>농축된 황금 방어막</td>
-      <td>기반 포션 + 발광석</td>
-      <td>흡수 2 (7분 30초) / 저항 2 (2분 15초)</td>
+      <td><strong>농축된 황금 방어막</strong></td>
+      <td>황금 방어막</td>
+      <td><strong>흡수 II (7분 30초), 저항 II (2분 15초)</strong></td>
     </tr>
     <tr>
-      <td>농축된 불사조의 가호</td>
-      <td>기반 포션 + 발광석</td>
-      <td>화염 저항 (11분 15초) / 재생 2 (45초)</td>
+      <td><strong>농축된 불사조의 가호</strong></td>
+      <td>불사조의 가호</td>
+      <td>화염 저항 I (11분 15초), <strong>재생 II (45초)</strong></td>
     </tr>
     <tr>
-      <td>농축된 번개 걸음</td>
-      <td>기반 포션 + 발광석</td>
-      <td>신속 2, 도약 강화 2 (7분 30초)</td>
+      <td><strong>농축된 번개 걸음</strong></td>
+      <td>번개 걸음</td>
+      <td><strong>신속 II (7분 30초), 도약 강화 II (7분 30초)</strong></td>
     </tr>
     <tr>
-      <td>농축된 세계수의 활력</td>
-      <td>기반 포션 + 발광석</td>
-      <td>생명력 강화 2 (7분 30초) / 재생 2 (1분 30초)</td>
+      <td><strong>농축된 세계수의 활력</strong></td>
+      <td>세계수의 활력</td>
+      <td><strong>생명력 강화 II (7분 30초), 재생 II (1분 30초)</strong></td>
     </tr>
     <tr>
-      <td>농축된 강철 갑옷</td>
-      <td>기반 포션 + 발광석</td>
-      <td>저항 2, 화염 저항 (6분)</td>
+      <td><strong>농축된 강철 갑옷</strong></td>
+      <td>강철 갑옷</td>
+      <td><strong>저항 II (6분)</strong>, 화염 저항 I (6분)</td>
     </tr>
     <tr>
-      <td>농축된 묵직한 인내</td>
-      <td>기반 포션 + 발광석</td>
-      <td>저항 2, 생명력 강화 2, 구속 1 (7분 30초)</td>
+      <td><strong>농축된 묵직한 인내</strong></td>
+      <td>묵직한 인내</td>
+      <td><strong>저항 II (7분 30초), 생명력 강화 II (7분 30초)</strong>, <font color="red">구속 I (7분 30초)</font></td>
     </tr>
     <tr>
-      <td>농축된 영혼의 시야</td>
-      <td>기반 포션 + 발광석</td>
-      <td>야간 투시, 수중 호흡 (11분 15초) / 발광 (45초)</td>
+      <td><strong>농축된 영혼의 시야</strong></td>
+      <td>영혼의 시야</td>
+      <td>야간 투시 I (11분 15초), 수중 호흡 I (11분 15초), 발광 I (45초)</td>
     </tr>
     <tr>
-      <td>농축된 나비의 춤</td>
-      <td>기반 포션 + 발광석</td>
-      <td>느린 낙하, 도약 강화 2, 신속 2 (6분)</td>
+      <td><strong>농축된 나비의 춤</strong></td>
+      <td>나비의 춤</td>
+      <td>느린 낙하 I (6분), <strong>도약 강화 II (6분), 신속 II (6분)</strong></td>
     </tr>
     <tr>
-      <td>농축된 태양의 치유</td>
-      <td>기반 포션 + 발광석</td>
-      <td>즉시 치유 3 / 흡수 2 (2분 15초) / 재생 2 (45초)</td>
+      <td><strong>농축된 태양의 치유</strong></td>
+      <td>태양의 치유</td>
+      <td><strong>즉시 치유 III (즉발), 흡수 II (2분 15초), 재생 II (45초)</strong></td>
     </tr>
     <tr>
-      <td>농축된 만드라고라 추출액</td>
-      <td>기반 포션 + 발광석</td>
-      <td>재생 2, 흡수 2 (3분 45초) / 멀미 (5초)</td>
+      <td><strong>농축된 만드라고라 추출액</strong></td>
+      <td>만드라고라 추출액</td>
+      <td><strong>재생 II (3분 45초), 흡수 II (3분 45초)</strong>, <font color="red">멀미 I (5초)</font></td>
     </tr>
     <tr>
-      <td>농축된 천둥새의 비상</td>
-      <td>기반 포션 + 발광석</td>
-      <td>신속 2, 성급함 2 (7분 30초)</td>
+      <td><strong>농축된 천둥새의 비상</strong></td>
+      <td>천둥새의 비상</td>
+      <td><strong>신속 II (7분 30초), 성급함 II (7분 30초)</strong></td>
     </tr>
     <tr>
-      <td>농축된 베히모스의 분노</td>
-      <td>기반 포션 + 발광석</td>
-      <td>힘 2, 저항 2, 생명력 강화 2 (6분)</td>
+      <td><strong>농축된 베히모스의 분노</strong></td>
+      <td>베히모스의 분노</td>
+      <td><strong>힘 II (6분), 저항 II (6분), 생명력 강화 II (6분)</strong></td>
     </tr>
     <tr>
-      <td>농축된 맹독성 투지</td>
-      <td>기반 포션 + 발광석</td>
-      <td>힘 2, 신속 2, 저항 2 (6분) / 독 1 (10초)</td>
+      <td><strong>농축된 맹독성 투지</strong></td>
+      <td>맹독성 투지</td>
+      <td><strong>힘 II (6분), 신속 II (6분), 저항 II (6분)</strong>, <font color="red">독 I (10초)</font></td>
     </tr>
     <tr>
-      <td>농축된 철벽의 묘약</td>
-      <td>기반 포션 + 발광석</td>
-      <td>저항 2, 흡수 2, 구속 1 (7분 30초)</td>
+      <td><strong>농축된 철벽의 묘약</strong></td>
+      <td>철벽의 묘약</td>
+      <td><strong>저항 II (7분 30초), 흡수 II (7분 30초)</strong>, <font color="red">구속 I (7분 30초)</font></td>
     </tr>
     <tr>
-      <td>농축된 행운의 물약</td>
-      <td>기반 포션 + 발광석</td>
-      <td>행운 7 (7분 30초)</td>
-    </tr>
-    <tr>
-      <td>농축된 돌고래의 의지</td>
-      <td>기반 포션 + 발광석</td>
-      <td>돌고래의 가호 1, 수중 호흡 1 (20분)</td>
+      <td><strong>농축된 행운의 물약</strong></td>
+      <td>행운의 물약</td>
+      <td><strong>행운 VII (7분 30초)</strong></td>
     </tr>
   </tbody>
 </table>
 {% endtab %}
 
-{% tab title="시간 증가" %}
-* 커스텀 양조기에서 일반 포션에 레드스톤 **블록**을 넣으시면 됩니다.
+{% tab title="시간 증가 (연장형)" %}
+* **양조 조건**: 1단계 특수 포션 + **레드스톤 블록 (`REDSTONE_BLOCK`)** 투입 *(가루 사용 불가)*
+* **공통 수치**: 양조 15초 / **소모 피로도 1** / 직업 EXP 150 / 복용 시 치유 EXP 200
+* **특징**: 효과 레벨은 1단계와 동일하게 유지되며, 지속 시간이 **1.5배 ~ 2배 (최대 20분~22분 30초)**로 대폭 연장됩니다.
 
 <table>
   <thead>
     <tr>
-      <th width="215.34783935546875">이름</th>
-      <th width="205.17388916015625">재료</th>
-      <th>효과</th>
+      <th width="180">연장 포션명</th>
+      <th width="150">베이스 포션</th>
+      <th>연장된 효과 및 지속 시간</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>안정된정령의 호흡</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>수중 호흡, 야간 투시 (20분)</td>
+      <td><strong>안정된 정령의 호흡</strong></td>
+      <td>정령의 호흡</td>
+      <td><strong>수중 호흡 I (20분), 야간 투시 I (20분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 오염된 투지</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>힘 1, 신속 1 (12분) / 위더 1 (5초)</td>
+      <td><strong>안정된 오염된 투지</strong></td>
+      <td>오염된 투지</td>
+      <td><strong>힘 I (12분), 신속 I (12분)</strong>, <font color="red">위더 I (5초)</font></td>
     </tr>
     <tr>
-      <td>안정된 그림자 망토</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>투명화, 신속 1 (20분)</td>
+      <td><strong>안정된 그림자 망토</strong></td>
+      <td>그림자 망토</td>
+      <td><strong>투명화 I (20분), 신속 I (20분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 요정의 축복</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>재생 1, 흡수 1 (4분 30초)</td>
+      <td><strong>안정된 요정의 축복</strong></td>
+      <td>요정의 축복</td>
+      <td><strong>재생 I (4분 30초), 흡수 I (4분 30초)</strong></td>
     </tr>
     <tr>
-      <td>안정된 시간 가속</td>
-      <td>기반 포션 + 레드스톤 블록 </td>
-      <td>성급함 1, 신속 1 (20분)</td>
+      <td><strong>안정된 시간 가속</strong></td>
+      <td>시간 가속</td>
+      <td><strong>성급함 I (20분), 신속 I (20분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 황금 방어막</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>흡수 1 (20분) / 저항 1 (6분)</td>
+      <td><strong>안정된 황금 방어막</strong></td>
+      <td>황금 방어막</td>
+      <td><strong>흡수 I (20분), 저항 I (6분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 불사조의 가호</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>화염 저항 (22분 30초) / 재생 1 (1분 30초)</td>
+      <td><strong>안정된 불사조의 가호</strong></td>
+      <td>불사조의 가호</td>
+      <td><strong>화염 저항 I (22분 30초), 재생 I (1분 30초)</strong></td>
     </tr>
     <tr>
-      <td>안정된 번개 걸음</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>신속 1, 도약 강화 1 (20분)</td>
+      <td><strong>안정된 번개 걸음</strong></td>
+      <td>번개 걸음</td>
+      <td><strong>신속 I (20분), 도약 강화 I (20분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 세계수의 활력</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>생명력 강화 1 (20분) / 재생 1 (4분)</td>
+      <td><strong>안정된 세계수의 활력</strong></td>
+      <td>세계수의 활력</td>
+      <td><strong>생명력 강화 I (20분), 재생 I (4분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 강철 갑옷</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>저항 1, 화염 저항 (12분)</td>
+      <td><strong>안정된 강철 갑옷</strong></td>
+      <td>강철 갑옷</td>
+      <td><strong>저항 I (12분), 화염 저항 I (12분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 묵직한 인내</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>저항 1, 생명력 강화 1, 구속 1 (20분)</td>
+      <td><strong>안정된 묵직한 인내</strong></td>
+      <td>묵직한 인내</td>
+      <td><strong>저항 I (20분), 생명력 강화 I (20분)</strong>, <font color="red">구속 I (20분)</font></td>
     </tr>
     <tr>
-      <td>안정된 영혼의 시야</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>야간 투시, 수중 호흡 (22분 30초) / 발광 (1분 30초)</td>
+      <td><strong>안정된 영혼의 시야</strong></td>
+      <td>영혼의 시야</td>
+      <td><strong>야간 투시 I (22분 30초), 수중 호흡 I (22분 30초)</strong>, 발광 I (1분 30초)</td>
     </tr>
     <tr>
-      <td>안정된 나비의 춤</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>느린 낙하, 도약 강화 1, 신속 1 (12분)</td>
+      <td><strong>안정된 나비의 춤</strong></td>
+      <td>나비의 춤</td>
+      <td><strong>느린 낙하 I (12분), 도약 강화 I (12분), 신속 I (12분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 태양의 치유</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>즉시 치유 2 / 흡수 1 (6분) / 재생 1 (2분)</td>
+      <td><strong>안정된 태양의 치유</strong></td>
+      <td>태양의 치유</td>
+      <td>즉시 치유 II (즉발), <strong>흡수 I (6분), 재생 I (2분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 만드라고라 추출액</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>재생 1, 흡수 1 (7분 30초) / 멀미 (5초)</td>
+      <td><strong>안정된 만드라고라 추출액</strong></td>
+      <td>만드라고라 추출액</td>
+      <td><strong>재생 I (7분 30초), 흡수 I (7분 30초)</strong>, <font color="red">멀미 I (5초)</font></td>
     </tr>
     <tr>
-      <td>안정된 천둥새의 비상</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>신속 1, 성급함 1 (20분)</td>
+      <td><strong>안정된 천둥새의 비상</strong></td>
+      <td>천둥새의 비상</td>
+      <td><strong>신속 I (20분), 성급함 I (20분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 베히모스의 분노</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>힘 1, 저항 1, 생명력 강화 1 (12분)</td>
+      <td><strong>안정된 베히모스의 분노</strong></td>
+      <td>베히모스의 분노</td>
+      <td><strong>힘 I (12분), 저항 I (12분), 생명력 강화 I (12분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 맹독성 투지</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>힘 1, 신속 1, 저항 1 (12분) / 독 1 (10초)</td>
+      <td><strong>안정된 맹독성 투지</strong></td>
+      <td>맹독성 투지</td>
+      <td><strong>힘 I (12분), 신속 I (12분), 저항 I (12분)</strong>, <font color="red">독 I (10초)</font></td>
     </tr>
     <tr>
-      <td>안정된 철벽의 묘약</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>저항 1, 흡수 1, 구속 1 (20분)</td>
+      <td><strong>안정된 철벽의 묘약</strong></td>
+      <td>철벽의 묘약</td>
+      <td><strong>저항 I (20분), 흡수 I (20분)</strong>, <font color="red">구속 I (20분)</font></td>
     </tr>
     <tr>
-      <td>안정된 행운의 물약</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>행운 5 (20분)</td>
+      <td><strong>안정된 행운의 물약</strong></td>
+      <td>행운의 물약</td>
+      <td><strong>행운 V (20분)</strong></td>
     </tr>
     <tr>
-      <td>안정된 돌고래의 의지</td>
-      <td>기반 포션 + 레드스톤 블록</td>
-      <td>돌고래의 가호 1, 수중 호흡 1 (20분)</td>
+      <td><strong>안정된 돌고래의 의지</strong></td>
+      <td>돌고래의 의지</td>
+      <td><strong>돌고래의 우아함 I (20분), 수중 호흡 I (20분)</strong></td>
     </tr>
   </tbody>
 </table>
+{% endtab %}
 
-
+{% tab title="특수 강화 & 스톤 포션" %}
+<table>
+  <thead>
+    <tr>
+      <th width="160">포션명</th>
+      <th width="150">상단 재료</th>
+      <th width="140">베이스 병</th>
+      <th>조건 / 시간 / 피로도 / 효과</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>빛나는 체력 포션</strong></td>
+      <td>황금빛 잎사귀</td>
+      <td>체력 포션</td>
+      <td><strong>연금술사 Lv. 10 필요</strong> / 25초 / 피로도 2 / <strong>즉시 치유 II (즉발)</strong></td>
+    </tr>
+    <tr>
+      <td><strong>체력 포션</strong></td>
+      <td>블러드 스톤</td>
+      <td>물병</td>
+      <td>기초 생명력 즉시 회복</td>
+    </tr>
+    <tr>
+      <td><strong>마나 회복 포션</strong></td>
+      <td>마나 스톤</td>
+      <td>물병</td>
+      <td>마나 대량 즉시 회복</td>
+    </tr>
+    <tr>
+      <td><strong>태양의 포션</strong></td>
+      <td>썬 스톤</td>
+      <td>물병</td>
+      <td>화염 저항 I (10분), 성급함 I (10분) <em>(레드스톤 블록으로 20분 연장 가능)</em></td>
+    </tr>
+    <tr>
+      <td><strong>달빛의 포션</strong></td>
+      <td>문 스톤</td>
+      <td>물병</td>
+      <td>야간 투시 I (10분), 신속 I (10분) <em>(레드스톤 블록으로 20분 연장 가능)</em></td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 {% endtabs %}
-
