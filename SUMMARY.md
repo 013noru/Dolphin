@@ -1,4 +1,4 @@
-﻿# Table of contents
+# Table of contents
 
 * [🐬 개요](README.md)
 
@@ -7,7 +7,7 @@
 * [\[ 01. 통합 목차 \]](guide/01..md)
 * [\[ 02. 튜토리얼 \]](guide/02..md)
 * [\[ 03. 명령어 \]](guide/03..md)
-* [\[ 04. 서버 경제 \]](guide/04..md)
+* [\[ 04. 마을 시스템 \]](guide/04..md)
 * [\[ 05. 아이템 및 조합법 \]](guide/05..md)
 * [\[ 06. 직업 \]](guide/06..md)
   * [\[ 06-1. 생활 직업 & 특성 \]](guide/06-1.md)
