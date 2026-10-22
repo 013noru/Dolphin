@@ -78,7 +78,7 @@
 <mark style="background-color:$primary;">**합성 주괴 옆의 책 버튼을 누르면 조합법으로 이동합니다.**</mark>
 
 {% tabs %}
-{% tab title="1" %}
+{% tab title="1단계 스프링쿨러" %}
 <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 * 범위 :&#x20;
@@ -112,7 +112,7 @@
 </table>
 {% endtab %}
 
-{% tab title="2" %}
+{% tab title="2단계 스프링쿨러" %}
 <figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 * 범위 :&#x20;
@@ -146,7 +146,7 @@
 </table>
 {% endtab %}
 
-{% tab title="3" %}
+{% tab title="3단계 스프링쿨러" %}
 <figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 
@@ -182,7 +182,7 @@
 </table>
 {% endtab %}
 
-{% tab title="4" %}
+{% tab title="4단계 스프링쿨러" %}
 <figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 * 범위 :&#x20;
@@ -216,7 +216,7 @@
 </table>
 {% endtab %}
 
-{% tab title="5" %}
+{% tab title="5단계 스프링쿨러" %}
 <figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 * 범위 : 9 \* 9
@@ -256,7 +256,7 @@
 <mark style="background-color:$primary;">**합성 주괴 옆의 책 버튼을 누르면 조합법으로 이동합니다.**</mark>
 
 {% tabs %}
-{% tab title="1" %}
+{% tab title="1단계 물뿌리개" %}
 <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 <table>  <thead>    <tr>
@@ -283,7 +283,7 @@
 </table>
 {% endtab %}
 
-{% tab title="2" %}
+{% tab title="2단계 물뿌리개" %}
 <figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 <table>
@@ -314,7 +314,7 @@
 </table>
 {% endtab %}
 
-{% tab title="3" %}
+{% tab title="3단계 물뿌리개" %}
 <figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 <table>
@@ -345,7 +345,7 @@
 </table>
 {% endtab %}
 
-{% tab title="4" %}
+{% tab title="4단계 물뿌리개" %}
 <figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 <table>
