@@ -2,7 +2,7 @@
 
 ## 망치
 
-&#x20;<a href="../2/undefined/undefined.md#undefined-1" class="button secondary medium">각종 광물 조합법</a>
+<a href="../2/undefined/undefined.md#undefined-1" class="button secondary medium">각종 광물 조합법</a>
 
 {% stepper %}
 {% step %}
@@ -57,6 +57,6 @@
 효과: 1회 사용 시 내구도 100% 회복, 최대 내구도 20 증가\
 조합법: 스텔라리움 주괴 + 플라즈마 망치\
 \
-![](<../../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (21).png>)
 {% endstep %}
 {% endstepper %}
