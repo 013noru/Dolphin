@@ -7,8 +7,183 @@
 
 ## 📑 업데이트 기록 바로가기
 
+* [2026. 10. 23 업데이트](#2026-10-23-업데이트)
 * [2026. 10. 22 업데이트](#2026-10-22-업데이트)
 * [2026. 10. 21 업데이트](#2026-10-21-업데이트)
+
+---
+
+## 2026. 10. 23 업데이트
+
+> 📢 **오늘의 업데이트 핵심 한눈에 보기 (선반영)**
+> * 🌟 **직업 특성 자동 마스터 랭크업(Rank-up) 시스템 도입**: 특성 선택 후 레벨 도달 시 별도 포인트 없이 2단계(⭐⭐) 및 3단계(⭐⭐⭐)로 특성 자동 강화
+> * ⚖️ **4대 생활 직업 전 직업 특성 밸런스 및 명칭 전면 개편**: 광부·농부·어부·사냥꾼 특성의 쿨다운, 발동 확률, 범위, 효과 전면 상향 및 신규 특성 배치
+
+---
+
+### 🌟 직업 특성 마스터 랭크업 및 전면 리밸런싱
+* **자동 마스터 랭크업 시스템 신규 적용**:
+  * 각 생활 직업은 **Lv. 5, 15, 30, 50, 80** 달성 시 티어별로 **2가지 특성 중 하나를 선택(2중 택 1)**합니다.
+  * 별도의 스킬 포인트 소모 없이, 캐릭터의 직업 레벨이 도달함에 따라 **자동으로 2단계(⭐⭐) 또는 3단계(⭐⭐⭐)로 마스터 랭크업**되어 효과 수치 증가 및 쿨다운 단축 혜택이 적용됩니다.
+* **직업별 5단계 특성 트리 및 마스터 랭크 요약**:
+
+{% tabs %}
+{% tab title="⛏️ 광부 특성 트리" %}
+<table>
+  <thead>
+    <tr>
+      <th align="center" width="120">티어 (해금 Lv)</th>
+      <th width="330">[선택 A 특성]</th>
+      <th width="330">[선택 B 특성]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong>Tier 1</strong><br>(Lv. 5)</td>
+      <td><strong>가벼운 곡괭이</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 5)</strong>: 채굴 시 5초간 <strong>신속 I</strong> (쿨 30초)<br>• ⭐⭐ <strong>2단계 (Lv. 60)</strong>: 채굴 시 5초간 <strong>신속 I</strong> (쿨 <strong>15초</strong>)<br>• <em>(내부 쿨다운 적용)</em></td>
+      <td><strong>지식의 광석</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 5)</strong>: 직업 EXP <strong>+10%</strong> / 바닐라 EXP <strong>+2</strong><br>• ⭐⭐ <strong>2단계 (Lv. 60)</strong>: 직업 EXP <strong>+15%</strong> / 바닐라 EXP <strong>+3</strong><br>• <em>(패시브 상시 적용)</em></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 2</strong><br>(Lv. 15)</td>
+      <td><strong>광부의 도파민</strong> <em>(3단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 15)</strong>: 채굴 시 10% 확률 <strong>성급함 (6초)</strong> (쿨 30초)<br>• ⭐⭐ <strong>2단계 (Lv. 40)</strong>: 채굴 시 10% 확률 <strong>성급함 (8초)</strong> (쿨 30초)<br>• ⭐⭐⭐ <strong>3단계 (Lv. 70)</strong>: 채굴 시 10% 확률 <strong>성급함 (10초)</strong> (쿨 30초)</td>
+      <td><strong>광맥의 잔상</strong> <em>(3단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 15)</strong>: 광석 채굴 시 10% 확률 <strong>반경 8블록</strong> 광물 투시 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 40)</strong>: 광석 채굴 시 10% 확률 <strong>반경 10블록</strong> 광물 투시 (쿨 60초)<br>• ⭐⭐⭐ <strong>3단계 (Lv. 70)</strong>: 광석 채굴 시 10% 확률 <strong>반경 14블록</strong> 광물 투시 (쿨 60초)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 3</strong><br>(Lv. 30)</td>
+      <td><strong>지층 파쇄</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 30)</strong>: 채굴 시 10% 확률 <strong>2×2 파괴</strong> (쿨 30초)<br>• ⭐⭐ <strong>2단계 (Lv. 85)</strong>: 채굴 시 10% 확률 <strong>3×3 (총 9칸) 파괴</strong> (쿨 30초)</td>
+      <td><strong>연쇄 채광</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 30)</strong>: 광맥 <strong>최대 32개 일괄 파괴</strong> (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 85)</strong>: 광맥 <strong>최대 64개 일괄 파괴</strong> (쿨 60초)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 4</strong><br>(Lv. 50)</td>
+      <td><strong>은빛 결실</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 50)</strong>: 광석 채굴 시 <strong>5% 확률</strong> 원석 +1 추가 드롭 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 95)</strong>: 광석 채굴 시 <strong>10% 확률</strong> 원석 +1 추가 드롭 (쿨 60초)</td>
+      <td><strong>금빛 결실</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 50)</strong>: 광석 채굴 시 <strong>5% 확률</strong> 완제품 +1개 추가 지급 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 95)</strong>: 광석 채굴 시 <strong>10% 확률</strong> 완제품 +1개 추가 지급 (쿨 60초)<br>• <em>(섬세한 손길 곡괭이 제외)</em></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 5</strong><br>(Lv. 80)</td>
+      <td><strong>대지의 숨결</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 80)</strong>: 채굴 시 3% 확률 배고픔 1칸 + 체력 1칸 + 내구도 1 수리 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 100)</strong>: 채굴 시 <strong>5% 확률</strong> 배고픔 2칸 + 체력 2칸 + 내구도 1 수리 (쿨 60초)</td>
+      <td><strong>고대 지층 발굴</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 80)</strong>: <strong>심층암</strong> 채굴 시 <strong>0.1% 확률</strong>로 고대 잔해 발견 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 100)</strong>: <strong>심층암</strong> 채굴 시 <strong>0.2% 확률</strong>로 고대 잔해 발견 (쿨 60초)</td>
+    </tr>
+  </tbody>
+</table>
+{% endtab %}
+
+{% tab title="🌾 농부 특성 트리" %}
+<table>
+  <thead>
+    <tr>
+      <th align="center" width="120">티어 (해금 Lv)</th>
+      <th width="330">[선택 A 특성]</th>
+      <th width="330">[선택 B 특성]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong>Tier 1</strong><br>(Lv. 5)</td>
+      <td><strong>풍요의 만찬</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 5)</strong>: 수확 시 5% 확률 배고픔 2칸 + 체력 2칸 + 괭이 내구도 2 수리<br>• ⭐⭐ <strong>2단계 (Lv. 60)</strong>: 수확 시 <strong>10% 확률</strong> 배고픔 3칸 + 체력 3칸 + <strong>괭이 내구도 4 수리</strong><br>• <em>(패시브 상시)</em></td>
+      <td><strong>풍요의 씨앗</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 5)</strong>: 직업 EXP <strong>+10%</strong> / 바닐라 EXP <strong>+1</strong> (쿨 5초)<br>• ⭐⭐ <strong>2단계 (Lv. 60)</strong>: 직업 EXP <strong>+15%</strong> / 바닐라 EXP <strong>+2</strong> (쿨 <strong>3초</strong>)<br>• <em>(내부 쿨다운 적용)</em></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 2</strong><br>(Lv. 15)</td>
+      <td><strong>씨앗 감정사</strong> <em>(CustomCrops / 3단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 15)</strong>: 수확 시 <strong>1% 확률</strong> 커스텀 씨앗 1개 획득 (쿨 40초)<br>• ⭐⭐ <strong>2단계 (Lv. 40)</strong>: 수확 시 <strong>2% 확률</strong> 커스텀 씨앗 1개 획득 (쿨 40초)<br>• ⭐⭐⭐ <strong>3단계 (Lv. 70)</strong>: 수확 시 <strong>4% 확률</strong> 커스텀 씨앗 1개 획득 (쿨 40초)</td>
+      <td><strong>풍작</strong> <em>(3단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 15)</strong>: 수확 시 <strong>10% 확률</strong>로 동일 작물(별 등급 동일) +1개 지급 (쿨 40초)<br>• ⭐⭐ <strong>2단계 (Lv. 40)</strong>: 수확 시 <strong>10% 확률</strong>로 동일 작물(별 등급 동일) +1개 지급 (쿨 40초)<br>• ⭐⭐⭐ <strong>3단계 (Lv. 70)</strong>: 수확 시 <strong>10% 확률</strong>로 동일 작물(별 등급 동일) +1개 지급 (쿨 40초)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 3</strong><br>(Lv. 30)</td>
+      <td><strong>대지의 행운</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 30)</strong>: 수확 시 <strong>2% 확률</strong> 황금 당근 또는 황금 사과 드롭 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 85)</strong>: 수확 시 <strong>3% 확률</strong> 황금 당근 또는 황금 사과 드롭 (쿨 60초)</td>
+      <td><strong>대지의 파동</strong> <em>(CustomCrops / 2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 30)</strong>: 수확 시 <strong>2% 확률</strong> 반경 <strong>3블록</strong> 작물 1단계 성장 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 85)</strong>: 수확 시 <strong>5% 확률</strong> 반경 <strong>5블록</strong> 작물 1단계 성장 (쿨 60초)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 4</strong><br>(Lv. 50)</td>
+      <td><strong>보라빛 결실</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 50)</strong>: 수확 시 <strong>2% 확률</strong> 최고급 보라별 작물 1개 지급 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 95)</strong>: 수확 시 <strong>3% 확률</strong> 최고급 보라별 작물 1개 지급 (쿨 60초)</td>
+      <td><strong>풍요의 손길</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 50)</strong>: 수확 시 <strong>5% 확률</strong> 완제품 작물 <strong>+2개 드롭</strong> (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 95)</strong>: 수확 시 <strong>10% 확률</strong> 완제품 작물 <strong>+2개 드롭</strong> (쿨 60초)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 5</strong><br>(Lv. 80)</td>
+      <td><strong>드러난 광물</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 80)</strong>: 수확 시 <strong>2% 확률</strong> 기본 광물·주괴 발굴 (합금 제외, 쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 100)</strong>: 수확 시 <strong>3% 확률</strong> 기본 광물·주괴 발굴 (합금 제외, 쿨 60초)</td>
+      <td><strong>고대 대지의 유물</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 80)</strong>: 수확 시 <strong>0.1% 확률</strong>로 고대 잔해 발굴 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 100)</strong>: 수확 시 <strong>0.2% 확률</strong>로 고대 잔해 발굴 (쿨 60초)</td>
+    </tr>
+  </tbody>
+</table>
+{% endtab %}
+
+{% tab title="🎣 어부 특성 트리" %}
+<table>
+  <thead>
+    <tr>
+      <th align="center" width="120">티어 (해금 Lv)</th>
+      <th width="330">[선택 A 특성]</th>
+      <th width="330">[선택 B 특성]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong>Tier 1</strong><br>(Lv. 5)</td>
+      <td><strong>잽싼 챔질</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 5)</strong>: 입질 대기시간 <strong>10% 단축</strong><br>• ⭐⭐ <strong>2단계 (Lv. 60)</strong>: 입질 대기시간 <strong>20% 단축</strong><br>• <em>(패시브 상시)</em></td>
+      <td><strong>지식의 낚싯바늘</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 5)</strong>: 직업 EXP <strong>+10%</strong> / 바닐라 EXP <strong>+3</strong><br>• ⭐⭐ <strong>2단계 (Lv. 60)</strong>: 직업 EXP <strong>+15%</strong> / 바닐라 EXP <strong>+5</strong><br>• <em>(패시브 상시)</em></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 2</strong><br>(Lv. 15)</td>
+      <td><strong>통발 장인</strong> <em>(CustomFishTraps / 3단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 15)</strong>: 통발 회수율 <strong>+10%</strong>, 통발 직업 EXP <strong>+10%</strong><br>• ⭐⭐ <strong>2단계 (Lv. 40)</strong>: 통발 회수율 <strong>+12%</strong>, 통발 직업 EXP <strong>+12%</strong><br>• ⭐⭐⭐ <strong>3단계 (Lv. 70)</strong>: 통발 회수율 <strong>+15%</strong>, 통발 직업 EXP <strong>+15%</strong><br>• <em>(패시브 상시)</em></td>
+      <td><strong>무아지경</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 15)</strong>: 입질 반응 실패 시 <strong>25% 확률 자동 챔질</strong> (쿨 30초)<br>• ⭐⭐ <strong>2단계 (Lv. 70)</strong>: 입질 반응 실패 시 <strong>50% 확률 자동 챔질</strong> (쿨 30초)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 3</strong><br>(Lv. 30)</td>
+      <td><strong>쌍둥이 월척</strong> <em>(3단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 30)</strong>: 낚시 성공 시 <strong>10% 확률</strong> 잡힌 물고기 <strong>2배 복제 지급</strong> (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 65)</strong>: <strong>15% 확률</strong> 잡힌 물고기 2배 복제 지급 (쿨 60초)<br>• ⭐⭐⭐ <strong>3단계 (Lv. 85)</strong>: <strong>30% 확률</strong> 잡힌 물고기 2배 복제 지급 (쿨 60초)</td>
+      <td><strong>보물 낚시꾼</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 30)</strong>: 낚시 성공 시 <strong>10% 확률</strong> 보물 인양 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 85)</strong>: 낚시 성공 시 <strong>20% 확률</strong> 보물 인양 (쿨 60초)<br>• <em>(보물: 인챈트북, 앵무조개 껍질, 이름표, 안장 등)</em></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 4</strong><br>(Lv. 50)</td>
+      <td><strong>소나기의 가호</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 50)</strong>: 우천 시 바닐라 EXP <strong>2배 (+100%)</strong> (쿨 20초)<br>• ⭐⭐ <strong>2단계 (Lv. 95)</strong>: 우천 시 바닐라 EXP <strong>3배 (+200%)</strong> (쿨 20초)</td>
+      <td><strong>미끼 재활용</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 50)</strong>: 낚시 시 <strong>15% 확률</strong> 미끼 소모 무효화 (쿨 20초)<br>• ⭐⭐ <strong>2단계 (Lv. 95)</strong>: 낚시 시 <strong>30% 확률</strong> 미끼 소모 무효화 (쿨 20초)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 5</strong><br>(Lv. 80)</td>
+      <td><strong>바다의 가호</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 80)</strong>: 낚시 성공 시 <strong>1% 확률</strong> 낚싯대 내구도 <strong>3 수리</strong><br>• ⭐⭐ <strong>2단계 (Lv. 100)</strong>: 낚시 성공 시 <strong>2% 확률</strong> 낚싯대 내구도 <strong>3 수리</strong><br>• <em>(패시브 상시)</em></td>
+      <td><strong>심해의 심장</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 80)</strong>: 낚시 성공 시 <strong>0.1% 확률</strong>로 <strong>바다의 심장(Heart of the Sea)</strong> 낚음<br>• ⭐⭐ <strong>2단계 (Lv. 100)</strong>: 낚시 성공 시 <strong>0.2% 확률</strong>로 <strong>바다의 심장</strong> 낚음<br>• <em>(패시브 상시)</em></td>
+    </tr>
+  </tbody>
+</table>
+{% endtab %}
+
+{% tab title="🏹 사냥꾼 특성 트리" %}
+<table>
+  <thead>
+    <tr>
+      <th align="center" width="120">티어 (해금 Lv)</th>
+      <th width="330">[선택 A 특성]</th>
+      <th width="330">[선택 B 특성]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong>Tier 1</strong><br>(Lv. 5)</td>
+      <td><strong>사냥의 도파민</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 5)</strong>: 처치 시 15% 확률 5초간 <strong>신속 II + 재생 I</strong> (쿨 20초)<br>• ⭐⭐ <strong>2단계 (Lv. 60)</strong>: 처치 시 <strong>20% 확률 7초간 신속 II + 재생 II</strong> (쿨 <strong>15초</strong>)<br>• <em>(내부 쿨다운 적용)</em></td>
+      <td><strong>추적자의 지혜</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 5)</strong>: 직업 EXP <strong>+10%</strong> / 바닐라 EXP <strong>+5</strong><br>• ⭐⭐ <strong>2단계 (Lv. 60)</strong>: 직업 EXP <strong>+15%</strong> / 바닐라 EXP <strong>+10</strong><br>• <em>(패시브 상시)</em></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 2</strong><br>(Lv. 15)</td>
+      <td><strong>전투 광란</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 15)</strong>: 처치 시 <strong>30% 확률</strong>로 <strong>배고픔 1칸 + 체력 1칸 회복</strong><br>• ⭐⭐ <strong>2단계 (Lv. 70)</strong>: 처치 시 <strong>50% 확률</strong>로 <strong>배고픔 2칸 + 체력 2칸 회복</strong><br>• <em>(패시브 상시)</em></td>
+      <td><strong>피의 축제</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 15)</strong>: 처치 시 <strong>30% 확률</strong>로 5초간 <strong>흡혈 + 이동속도 +5%</strong> (쿨 10초)<br>• ⭐⭐ <strong>2단계 (Lv. 70)</strong>: 처치 시 <strong>50% 확률</strong>로 5초간 <strong>흡혈 + 이동속도 +10%</strong> (쿨 10초)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 3</strong><br>(Lv. 30)</td>
+      <td><strong>강화 타격</strong> <em>(3단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 30)</strong>: 타격 시 <strong>10% 확률 1.5배 피해</strong> (쿨 10초)<br>• ⭐⭐ <strong>2단계 (Lv. 65)</strong>: 타격 시 <strong>15% 확률 1.8배 피해</strong> (쿨 10초)<br>• ⭐⭐⭐ <strong>3단계 (Lv. 85)</strong>: 타격 시 <strong>20% 확률 2.0배 피해</strong> (쿨 10초)</td>
+      <td><strong>광역 타격</strong> <em>(3단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 30)</strong>: 타격 시 <strong>10% 확률</strong>로 <strong>반경 5블록 피해 15</strong> (쿨 20초)<br>• ⭐⭐ <strong>2단계 (Lv. 65)</strong>: 타격 시 <strong>15% 확률</strong>로 <strong>반경 5블록 피해 15</strong> (쿨 20초)<br>• ⭐⭐⭐ <strong>3단계 (Lv. 85)</strong>: 타격 시 <strong>20% 확률</strong>로 <strong>반경 5블록 피해 15</strong> (쿨 20초)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 4</strong><br>(Lv. 50)</td>
+      <td><strong>거물 사냥꾼</strong> <em>(MythicMobs / 2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 50)</strong>: <strong>체력 50 이상 대상</strong> 타격 시 <strong>데미지 1.5배</strong> (쿨 20초)<br>• ⭐⭐ <strong>2단계 (Lv. 95)</strong>: <strong>체력 50 이상 대상</strong> 타격 시 <strong>데미지 2.0배</strong> (쿨 20초)</td>
+      <td><strong>현상금 사냥꾼</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 50)</strong>: 처치 시 <strong>5% 확률 500~1,500원</strong> 드롭 (쿨 120초)<br>• ⭐⭐ <strong>2단계 (Lv. 95)</strong>: 처치 시 <strong>10% 확률 1,000~2,000원</strong> 드롭 (쿨 <strong>90초</strong>)</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Tier 5</strong><br>(Lv. 80)</td>
+      <td><strong>추가 약탈</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 80)</strong>: 처치 시 <strong>5% 확률</strong>로 전리품 1회 추가 추첨 (쿨 60초)<br>• ⭐⭐ <strong>2단계 (Lv. 100)</strong>: 처치 시 <strong>10% 확률</strong>로 전리품 1회 추가 추첨 (쿨 60초)</td>
+      <td><strong>고대 잔해 약탈</strong> <em>(2단계 마스터)</em><br>• ⭐ <strong>1단계 (Lv. 80)</strong>: 처치 시 <strong>0.2% 확률</strong>로 <strong>고대 잔해(Ancient Debris)</strong> 드롭<br>• ⭐⭐ <strong>2단계 (Lv. 100)</strong>: 처치 시 <strong>0.5% 확률</strong>로 <strong>고대 잔해</strong> 드롭<br>• <em>(쿨다운 없음 / 상시 패시브)</em></td>
+    </tr>
+  </tbody>
+</table>
+{% endtab %}
+{% endtabs %}
 
 ---
 
