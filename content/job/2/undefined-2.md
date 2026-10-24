@@ -108,7 +108,11 @@
 {% tab title="1단계 물뿌리개" %}
 <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-<table><thead><tr><th></th><th width="232"></th><th></th></tr></thead><tbody><tr><td>구리 주괴</td><td>돌</td><td>구리 주괴</td></tr><tr><td>돌</td><td>양동이</td><td>돌</td></tr><tr><td>구리 주괴</td><td>돌</td><td>구리 주괴</td></tr></tbody></table>
+<table><thead><tr>
+      <th width="120"></th>
+      <th width="120"></th>
+      <th width="120"></th>
+    </tr></thead><tbody><tr><td>구리 주괴</td><td>돌</td><td>구리 주괴</td></tr><tr><td>돌</td><td>양동이</td><td>돌</td></tr><tr><td>구리 주괴</td><td>돌</td><td>구리 주괴</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="2단계 물뿌리개" %}

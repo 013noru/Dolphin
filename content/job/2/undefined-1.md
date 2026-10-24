@@ -58,9 +58,9 @@
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th width="120"></th>
+      <th width="120"></th>
+      <th width="120"></th>
     </tr>
   </thead>
   <tbody>
@@ -121,9 +121,9 @@
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th width="120"></th>
+      <th width="120"></th>
+      <th width="120"></th>
     </tr>
   </thead>
   <tbody>
@@ -194,9 +194,9 @@
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th width="120"></th>
+      <th width="120"></th>
+      <th width="120"></th>
     </tr>
   </thead>
   <tbody>
@@ -267,9 +267,9 @@
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th width="120"></th>
+      <th width="120"></th>
+      <th width="120"></th>
     </tr>
   </thead>
   <tbody>
@@ -345,9 +345,9 @@
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th width="120"></th>
+      <th width="120"></th>
+      <th width="120"></th>
     </tr>
   </thead>
   <tbody>
@@ -423,9 +423,9 @@
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th width="120"></th>
+      <th width="120"></th>
+      <th width="120"></th>
     </tr>
   </thead>
   <tbody>

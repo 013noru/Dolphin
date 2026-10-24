@@ -12,10 +12,10 @@
 <table>
   <thead>
     <tr>
-      <th width="140.6956787109375">강화 단계</th>
-      <th width="159.3046875">근접 무기 (공격력)</th>
-      <th width="144.95654296875">원거리 무기 (공격력)</th>
-      <th width="154.2608642578125">방어구 (체력)</th>
+      <th width="120">강화 단계</th>
+      <th width="160">근접 무기 (공격력)</th>
+      <th width="160">원거리 무기 (공격력)</th>
+      <th width="150">방어구 (체력)</th>
       <th>방어구 (방어력)</th>
     </tr>
   </thead>
@@ -56,12 +56,12 @@
 <table>
   <thead>
     <tr>
-      <th>강화</th>
-      <th>소모 재화</th>
-      <th>성공 확률</th>
-      <th width="118.8260498046875">유지 확률</th>
-      <th width="102.78271484375">실패 확률</th>
-      <th>미끄러짐</th>
+      <th align="center" width="80">강화</th>
+      <th align="center" width="90">소모 재화</th>
+      <th align="center" width="95">성공 확률</th>
+      <th align="center" width="95">유지 확률</th>
+      <th align="center" width="95">실패 확률</th>
+      <th align="center" width="90">미끄러짐</th>
     </tr>
   </thead>
   <tbody>

@@ -11,8 +11,8 @@
 <table>
   <thead>
     <tr>
-      <th>명령어</th>
-      <th>별칭 (Alias)</th>
+      <th width="160">명령어</th>
+      <th width="160">별칭 (Alias)</th>
       <th>설명</th>
     </tr>
   </thead>
@@ -53,12 +53,12 @@
 <table>
   <thead>
     <tr>
-      <th align="center">단계</th>
-      <th>랭크명</th>
-      <th>권한 그룹</th>
-      <th align="center">총합 레벨</th>
-      <th align="center">주력 스킬 기준치<br>(상위 4개 각각)</th>
-      <th align="right">소모 코인</th>
+      <th align="center" width="70">단계</th>
+      <th width="135">랭크명</th>
+      <th width="145">권한 그룹</th>
+      <th align="center" width="95">총합 레벨</th>
+      <th align="center" width="135">주력 스킬 기준치<br>(상위 4개 각각)</th>
+      <th align="right" width="145">소모 코인</th>
       <th>주요 혜택 및 해금</th>
     </tr>
   </thead>
