@@ -6,10 +6,427 @@
 
 ## 📑 업데이트 기록 바로가기
 
+* [2026. 10. 27 업데이트](#2026-10-27-업데이트)
 * [2026. 10. 25 업데이트 미리보기](#2026-10-25-업데이트-미리보기)
 * [2026. 10. 23 업데이트](#2026-10-23-업데이트)
 * [2026. 10. 22 업데이트](#2026-10-22-업데이트)
 * [2026. 10. 21 업데이트](#2026-10-21-업데이트)
+
+---
+
+## 2026. 10. 27 업데이트
+
+> 📢 **업데이트 핵심 한눈에 보기**
+> * 🍳 **요리 1★ ~ 5★ 별 등급(품질) 시스템 도입**: 요리 완성 시 품질 추첨 및 제작자 닉네임 각인, 요리사 직업 레벨에 따라 고등급(4★·5★) 출현 확률 상승
+> * 🔨 **장비 수리 과부하(Overload) 2배 상향 & 대장장이 작업대 연동**: 수리 과부하율 2배 증가(계수 2.0 ➔ 4.0), 대장장이 작업대 망치 수리 시 과부하 정상 누적, 과부하 100% 도달 시 추출되는 인챈트 책 성공률 1%로 조정
+> * 📜 **일일 퀘스트(ODailyQuests) 24종 전면 개편**: 쉬움·보통·어려움 3단계 난이도 동일 풀 공유 및 경험치 보상(1,000 / 2,500 / 6,000 XP) 확정
+> * 💼 **직업 의뢰(CustomJobs) 세트 단위(64/128/192) 개편 & 신규 퀘스트 풀 확장**: 광부 커스텀 광물 30종, 농부 커스텀 작물 33종, 어부 미끼 낚시 3종 등 대규모 추가
+> * 🏆 **실시간 랭킹 시스템(Ranking) 30종 연동**: 도감 점수 랭킹 신설 및 실시간 순위 조회 명령어(`/ranking top`) 지원
+> * 🏞️ **토지(Lands) 청크 구매비 증가율 완화**: 청크 추가 구매 시 가격 증가 배율이 1.08배에서 **1.07배**로 인하
+
+---
+
+### 🍳 요리 별 등급(품질) 시스템 (CustomCook)
+* **1★ ~ 5★ 별 등급(품질) 추첨 도입**:
+  * 조리 솥(Cooking Pot) 및 커스텀 조리대에서 요리를 완성할 때 1★ ~ 5★ 별 등급이 무작위 추첨됩니다.
+  * 글레이즈드 햄, 과일 샐러드, 초밥, 수제 버거 등 28종 이상의 요리에 전면 적용되었습니다.
+* **요리사 직업 레벨 보너스 연동**:
+  * `CustomJobs` 요리사 직업 레벨이 높을수록 4★(영웅)과 5★(전설)의 출현 확률이 증가합니다.
+  * 보너스 공식: 레벨당 4★ / 5★ 가중치 각각 `+0.15`
+
+<table>
+  <thead>
+    <tr>
+      <th align="center" width="70">등급</th>
+      <th width="120">품질 명칭</th>
+      <th align="center" width="90">표시 접두사</th>
+      <th align="center" width="100">기본 확률 (Lv.1)</th>
+      <th align="center" width="110">중급 확률 (Lv.25)</th>
+      <th align="center" width="110">만렙 확률 (Lv.50)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong>1★</strong></td>
+      <td>일반 (Common)</td>
+      <td align="center"><span style="color:#AAAAAA;">[ ★ ]</span></td>
+      <td align="center">50.0%</td>
+      <td align="center">46.5%</td>
+      <td align="center">43.5%</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>2★</strong></td>
+      <td>고급 (Uncommon)</td>
+      <td align="center"><span style="color:#55FF55;">[ ★★ ]</span></td>
+      <td align="center">30.0%</td>
+      <td align="center">27.9%</td>
+      <td align="center">26.1%</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>3★</strong></td>
+      <td>희귀 (Rare)</td>
+      <td align="center"><span style="color:#5555FF;">[ ★★★ ]</span></td>
+      <td align="center">14.0%</td>
+      <td align="center">13.0%</td>
+      <td align="center">12.2%</td>
+    </tr>
+    <tr>
+      <td align="center"><strong>4★</strong></td>
+      <td>영웅 (Epic)</td>
+      <td align="center"><span style="color:#AA00AA;">[ ★★★★ ]</span></td>
+      <td align="center">5.0%</td>
+      <td align="center">8.1%</td>
+      <td align="center"><strong>10.9%</strong></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>5★</strong></td>
+      <td>전설 (Legendary)</td>
+      <td align="center"><span style="color:#FFAA00;">[ ★★★★★ ]</span></td>
+      <td align="center">1.0%</td>
+      <td align="center">4.4%</td>
+      <td align="center"><strong>7.4%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+* **아이템 로어 및 정보 각인**:
+  * 완성된 요리 아이템에 별 등급과 제작자 닉네임(`제작자: <닉네임>`)이 영구 각인됩니다.
+* **조리 완료 피드백 개선**:
+  * 요리 완료 시 화면 하단 액션바(ActionBar)를 통해 안내가 출력됩니다. (중복 사운드 제거)
+* **신규 요리 카테고리 확장 예고**:
+  * 향후 보양 탕/수프/면류, 볶음/튀김류, 증기 찜류 요리 및 자가 제면·만두소 등 중간 식재료 가공 시스템이 순차적으로 추가될 예정입니다.
+
+---
+
+### 🔨 장비 수리 과부하 & 대장장이 작업대 개편 (CustomSmith)
+* **수리 과부하율 2배 상향**:
+  * 커스텀 인챈트 장비 수리 시 누적되는 과부하 배율 계수가 `2.0`에서 **`4.0`**으로 2배 증가했습니다.
+  * 공식: $\text{추가 과부하 (\%)} = \left(\frac{\text{수리된 내구도량}}{\text{장비 최대 내구도}}\right) \times \mathbf{4.0}$
+* **대장장이 작업대(망치 수리) 과부하 연동**:
+  * 기존 휴대용 수리팩 외에 **대장장이 작업대에서 망치로 장비를 수리할 때도 과부하가 정상 누적**됩니다.
+  * 내구도가 완충된 상태에서 최대 내구도 증가 보너스만 얻기 위해 수리하는 경우에도 망치 기본 수리 비율을 기준으로 과부하가 계산됩니다.
+
+<table>
+  <thead>
+    <tr>
+      <th width="180">수리 수단</th>
+      <th align="center" width="110">1회 수리 비율</th>
+      <th align="center" width="130">기존 과부하 증가율</th>
+      <th align="center" width="150"><strong>변경 후 과부하 증가율</strong></th>
+      <th align="center" width="140">100% 도달 수리 횟수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>강철 망치 / 수리팩</strong></td>
+      <td align="center">10% 회복</td>
+      <td align="center">약 +0.20%</td>
+      <td align="center"><strong>약 +0.40%</strong></td>
+      <td align="center">약 250회</td>
+    </tr>
+    <tr>
+      <td><strong>텅스텐 망치 / 수리팩</strong></td>
+      <td align="center">30% 회복</td>
+      <td align="center">약 +0.60%</td>
+      <td align="center"><strong>약 +1.20%</strong></td>
+      <td align="center">약 84회</td>
+    </tr>
+    <tr>
+      <td><strong>티타늄 망치 / 수리팩</strong></td>
+      <td align="center">50% 회복</td>
+      <td align="center">약 +1.00%</td>
+      <td align="center"><strong>약 +2.00%</strong></td>
+      <td align="center">약 50회</td>
+    </tr>
+    <tr>
+      <td><strong>플라즈마 망치 / 수리팩</strong></td>
+      <td align="center">70% 회복</td>
+      <td align="center">약 +1.40%</td>
+      <td align="center"><strong>약 +2.80%</strong></td>
+      <td align="center">약 36회</td>
+    </tr>
+    <tr>
+      <td><strong>스텔라리움 망치 / 수리팩</strong></td>
+      <td align="center">100% 회복</td>
+      <td align="center">약 +2.00%</td>
+      <td align="center"><strong>약 +4.00%</strong></td>
+      <td align="center">약 25회</td>
+    </tr>
+  </tbody>
+</table>
+
+* **과부하 100% 도달 시(Pop-Off) 인챈트 책 추출 규칙 조정**:
+  * 누적 과부하가 100.0%에 도달하면 해당 커스텀 인챈트가 장비에서 제거되며 인챈트 책으로 추출됩니다.
+  * 추출된 인챈트 책의 성공률이 **1%** (파괴율 100%)로 조정되었습니다.
+* **과부하 정화 메커니즘 안내**:
+  * 마법 가루(Magic Dust)를 인챈트 장비 위에 클릭하여 과부하를 정화할 수 있습니다.
+  * 장비에 적용된 인챈트 중 **가장 높은 등급과 동일하거나 그 이상의 마법 가루**가 필요합니다.
+* **CustomSmith 인챈트 목록 160종 최신화**:
+  * 신규 인챈트 16종(`스컬크 수확`, `스컬크 흡수`, `살기 I~III`, `원석 복제`, `광맥`, `내공`, `간식`, 생활 직업군, `자동 낚시` 등) 등록
+  * `연쇄 채굴(veinminer)` 등급: **SS 등급**으로 정상화
+  * `자동 낚시(autoreel)` 전용 **MASTERY 등급** 신설
+
+---
+
+### 📜 일일 퀘스트 전면 개편 (ODailyQuests)
+* **난이도 구조 일원화 및 경험치 보상 확정**:
+  * `쉬움(easy)`, `보통(medium)`, `어려움(hard)` 3개 난이도가 동일한 24종 퀘스트 풀을 공유하며, 난이도에 따라 요구 수량과 보상만 상승합니다.
+  * **쉬움 (`easy`)**: **1,000 XP**
+  * **보통 (`medium`)**: **2,500 XP**
+  * **어려움 (`hard`)**: **6,000 XP**
+* **일일 부여 및 갱신**:
+  * 매일 난이도별 3개씩 **총 9개**의 일일 퀘스트가 부여되며, 매일 자정 `00:00`에 자동 갱신됩니다.
+* **나무 판자 설치 퀘스트 신설**:
+  * 기존 비활성화 주민 거래 퀘스트가 12종 나무 판자류 블록 설치(`PLACE`) 퀘스트로 교체되었습니다.
+* **유저 명령어 안내**:
+  * `/dq`, `/dq me`: 일일 퀘스트 목록 GUI 열기
+  * `/dq reroll <번호>`: 특정 슬롯 퀘스트 다시 뽑기
+  * `/dq show <easy|medium|hard>`: 난이도별 퀘스트 확인
+
+<table>
+  <thead>
+    <tr>
+      <th align="center" width="40">No</th>
+      <th width="150">퀘스트 이름</th>
+      <th width="230">세부 목표 및 조건</th>
+      <th align="center" width="95">쉬움 (1,000 XP)</th>
+      <th align="center" width="95">보통 (2,500 XP)</th>
+      <th align="center" width="95">어려움 (6,000 XP)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">1</td>
+      <td><strong>광산 깊은 곳으로</strong></td>
+      <td>돌, 조약돌, 심층암, 조약돌 심층암 채굴</td>
+      <td align="center">128개</td>
+      <td align="center">256개</td>
+      <td align="center">512개</td>
+    </tr>
+    <tr>
+      <td align="center">2</td>
+      <td><strong>베테랑 벌목꾼</strong></td>
+      <td>원목, 줄기 및 껍질 벗긴 원목 채벌</td>
+      <td align="center">64개</td>
+      <td align="center">128개</td>
+      <td align="center">256개</td>
+    </tr>
+    <tr>
+      <td align="center">3</td>
+      <td><strong>든든한 화력</strong></td>
+      <td>석탄 원석 및 심층암 석탄 원석 채굴</td>
+      <td align="center">32개</td>
+      <td align="center">64개</td>
+      <td align="center">128개</td>
+    </tr>
+    <tr>
+      <td align="center">4</td>
+      <td><strong>강철의 기초</strong></td>
+      <td>철 원석 및 심층암 철 원석 채굴</td>
+      <td align="center">24개</td>
+      <td align="center">48개</td>
+      <td align="center">96개</td>
+    </tr>
+    <tr>
+      <td align="center">5</td>
+      <td><strong>지하의 보물</strong></td>
+      <td>다이아몬드 원석 채굴</td>
+      <td align="center">3개</td>
+      <td align="center">6개</td>
+      <td align="center">12개</td>
+    </tr>
+    <tr>
+      <td align="center">6</td>
+      <td><strong>붉은 지옥 탐험</strong></td>
+      <td>네더랙 또는 네더 석영 원석 채굴</td>
+      <td align="center">64개</td>
+      <td align="center">128개</td>
+      <td align="center">256개</td>
+    </tr>
+    <tr>
+      <td align="center">7</td>
+      <td><strong>황금빛 들판</strong></td>
+      <td>다 자란 밀 수확</td>
+      <td align="center">48개</td>
+      <td align="center">96개</td>
+      <td align="center">192개</td>
+    </tr>
+    <tr>
+      <td align="center">8</td>
+      <td><strong>달콤한 뿌리채소</strong></td>
+      <td>다 자란 당근 또는 감자 수확</td>
+      <td align="center">48개</td>
+      <td align="center">96개</td>
+      <td align="center">192개</td>
+    </tr>
+    <tr>
+      <td align="center">9</td>
+      <td><strong>생명의 축복</strong></td>
+      <td>소, 돼지, 양, 닭 동물 교배</td>
+      <td align="center">8회</td>
+      <td align="center">16회</td>
+      <td align="center">30회</td>
+    </tr>
+    <tr>
+      <td align="center">10</td>
+      <td><strong>폭신한 양털</strong></td>
+      <td>양 털 깎기</td>
+      <td align="center">8마리</td>
+      <td align="center">16마리</td>
+      <td align="center">30마리</td>
+    </tr>
+    <tr>
+      <td align="center">11</td>
+      <td><strong>충직한 동반자</strong></td>
+      <td>늑대, 고양이, 말, 앵무새 길들이기</td>
+      <td align="center">2마리</td>
+      <td align="center">4마리</td>
+      <td align="center">8마리</td>
+    </tr>
+    <tr>
+      <td align="center">12</td>
+      <td><strong>어둠의 약탈자</strong></td>
+      <td>좀비, 허스크, 드라운드 처치</td>
+      <td align="center">20마리</td>
+      <td align="center">40마리</td>
+      <td align="center">80마리</td>
+    </tr>
+    <tr>
+      <td align="center">13</td>
+      <td><strong>뼈마디 바스러지는 소리</strong></td>
+      <td>스켈레톤, 스트레이 처치</td>
+      <td align="center">15마리</td>
+      <td align="center">30마리</td>
+      <td align="center">60마리</td>
+    </tr>
+    <tr>
+      <td align="center">14</td>
+      <td><strong>어둠 속의 붉은 눈</strong></td>
+      <td>거미, 동굴 거미 처치</td>
+      <td align="center">12마리</td>
+      <td align="center">24마리</td>
+      <td align="center">50마리</td>
+    </tr>
+    <tr>
+      <td align="center">15</td>
+      <td><strong>치익 치익 쾅!</strong></td>
+      <td>크리퍼 처치</td>
+      <td align="center">8마리</td>
+      <td align="center">16마리</td>
+      <td align="center">32마리</td>
+    </tr>
+    <tr>
+      <td align="center">16</td>
+      <td><strong>차원을 넘는 시선</strong></td>
+      <td>엔더맨 처치</td>
+      <td align="center">3마리</td>
+      <td align="center">6마리</td>
+      <td align="center">12마리</td>
+    </tr>
+    <tr>
+      <td align="center">17</td>
+      <td><strong>뜨거운 제련소</strong></td>
+      <td>화로/용광로에서 철괴 제련</td>
+      <td align="center">24개</td>
+      <td align="center">48개</td>
+      <td align="center">96개</td>
+    </tr>
+    <tr>
+      <td align="center">18</td>
+      <td><strong>맛있는 바비큐</strong></td>
+      <td>소/돼지/양/닭고기 굽기</td>
+      <td align="center">20개</td>
+      <td align="center">40개</td>
+      <td align="center">80개</td>
+    </tr>
+    <tr>
+      <td align="center">19</td>
+      <td><strong>강태공의 손맛</strong></td>
+      <td>대구 또는 연어 낚시</td>
+      <td align="center">10마리</td>
+      <td align="center">20마리</td>
+      <td align="center">40마리</td>
+    </tr>
+    <tr>
+      <td align="center">20</td>
+      <td><strong>장인의 손길</strong></td>
+      <td>철 도구, 방패, 활 제작</td>
+      <td align="center">3개</td>
+      <td align="center">6개</td>
+      <td align="center">12개</td>
+    </tr>
+    <tr>
+      <td align="center">21</td>
+      <td><strong>마을 창고 비축</strong></td>
+      <td>철괴 납품 (GUI 클릭 소모)</td>
+      <td align="center">10개</td>
+      <td align="center">20개</td>
+      <td align="center">40개</td>
+    </tr>
+    <tr>
+      <td align="center">22</td>
+      <td><strong>마법의 기운</strong></td>
+      <td>마법부여대에서 인챈트 실행</td>
+      <td align="center">3회</td>
+      <td align="center">6회</td>
+      <td align="center">12회</td>
+    </tr>
+    <tr>
+      <td align="center">23</td>
+      <td><strong>목수의 첫걸음</strong></td>
+      <td>모든 종류의 나무 판자류 블록 설치</td>
+      <td align="center">64개</td>
+      <td align="center">128개</td>
+      <td align="center">256개</td>
+    </tr>
+    <tr>
+      <td align="center">24</td>
+      <td><strong>지혜의 성장</strong></td>
+      <td>경험치 레벨 상승</td>
+      <td align="center">8레벨</td>
+      <td align="center">15레벨</td>
+      <td align="center">25레벨</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+### 💼 직업 의뢰 개편 및 신규 퀘스트 추가 (CustomJobs)
+* **채집/생산형 직업 퀘스트 요구 수량 개편**:
+  * 채집 및 생산형 의뢰의 난이도별 요구 수량이 인벤토리 세트 단위인 **64개(1세트) / 128개(2세트) / 192개(3세트)**로 통일되었습니다.
+  * **[초급] 의뢰**: 요구 수량 64개 (1세트) | 보상: 400 EXP / 1,500원
+  * **[중급] 의뢰**: 요구 수량 128개 (2세트) | 보상: 800 EXP / 3,000원
+  * **[고급] 의뢰**: 요구 수량 192개 (3세트) | 보상: 1,600 EXP / 6,000원
+* **직업별 신규 퀘스트 풀 확장**:
+  * **⛏️ 광부**: 커스텀 광물 10종(주석, 은, 납, 티타늄, 텅스텐, 루비, 사파이어, 플래티넘, 코발트, 미스릴) 채굴 의뢰 3단계(64/128/192개) **총 30종 추가**
+  * **🌾 농부**: 상점 판매 커스텀 작물 11종(가지, 고추, 옥수수, 토마토, 배추, 양배추, 마늘, 양파, 딸기, 포도, 파인애플) 수확 의뢰 3단계(64/128/192개) **총 33종 추가**
+  * **🎣 어부**: 미끼 착용 낚시 횟수제 의뢰 3단계(64/128/192회) **총 3종 추가**
+  * **🔨 대장장이**: 강철 망치 제작 의뢰(1개, 400 EXP / 1,500원) 및 대장장이 작업대 도구 수리 의뢰 3단계(1회 400 EXP / 3회 1,200 EXP / 5회 2,000 EXP) **총 4종 추가**
+  * **🔮 마법부여사**: 마법부여대 장비 마법부여 의뢰 3단계(1회 400 EXP / 3회 1,200 EXP / 5회 2,000 EXP) **총 3종 추가**
+  * **🏹 사냥꾼**: 일반 몬스터 토벌 및 필드/던전 보스 토벌 의뢰 연동
+
+---
+
+### 🏆 실시간 랭킹 시스템 연동 (Ranking)
+* **30종 랭킹 카테고리 실시간 수집 및 캐싱**:
+  * 10분 주기로 순위 데이터가 자동 갱신됩니다.
+  * **재화 보유 랭킹 (5종)**: 재화(코인), 캐시, 마일리지, 잠수포인트, 이스터포인트
+  * **일일 재화 성장 랭킹 (3종)**: 당일 획득 재화(코인), 캐시, 마일리지
+  * **AuraSkills 스킬 레벨 랭킹 (15종)**: 채광, 농사, 낚시, 채집, 발굴, 마법부여, 연금술, 방어, 전투, 궁술, 민첩, 지구력, 치유, 단조, 마법
+  * **스킬 일일 경험치 성장 랭킹 (7종)**: 당일 획득 채광, 농사, 낚시, 채집, 발굴, 마법부여, 연금술 경험치
+  * **서버 활동 및 컨텐츠 랭킹 (2종)**: 서버 추천(투표), **도감 점수(COLLECTION)**
+* **신규 도감(COLLECTION) 랭킹 신설**:
+  * 도감 총 달성 점수 기준 상위 1~10위 유저 순위가 집계됩니다.
+* **유저 랭킹 조회 명령어**:
+  * `/ranking top <카테고리>`
+  * 단축어 지원: `money`, `coin`, `collect`, `dogam`, `mining`, `farming`, `fishing` 등
+
+---
+
+### 🏞️ 토지(Lands) 밸런스 조정
+* **청크 구매비 증가율 완화**:
+  * 토지(땅) 청크 추가 구매 시 적용되는 가격 상승 배율이 기존 `1.08배`에서 **`1.07배`**로 인하되었습니다.
 
 ---
 
