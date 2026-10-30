@@ -107,9 +107,15 @@
   <tbody>
     <tr>
       <td><strong>/pay</strong></td>
-      <td><code>/지불</code>, <code>/돈 보내기</code></td>
+      <td><code>/지불</code>, <code>/돈 보내기</code>, <code>/돈 송금</code></td>
       <td><code>/pay &lt;닉네임&gt; &lt;금액&gt;</code><br><code>/지불 &lt;닉네임&gt; &lt;금액&gt;</code><br><code>/돈 보내기 &lt;닉네임&gt; &lt;금액&gt;</code></td>
       <td>지정한 대상 플레이어에게 해당 금액만큼 코인을 실시간 송금합니다.</td>
+    </tr>
+    <tr>
+      <td><strong>/캐시 보내기</strong></td>
+      <td><code>/캐시 송금</code>, <code>/cash pay</code></td>
+      <td><code>/캐시 보내기 &lt;닉네임&gt; &lt;금액&gt;</code><br><code>/cash pay &lt;닉네임&gt; &lt;금액&gt;</code></td>
+      <td>지정한 대상 플레이어에게 캐시를 실시간 송금합니다.</td>
     </tr>
   </tbody>
 </table>
