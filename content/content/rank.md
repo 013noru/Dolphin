@@ -258,3 +258,118 @@
     * **텔레포트 대기시간 면제 (0초 즉시 이동)**: 대기시간(Warmup) 없이 홈, 스폰, 워프, 서버 이동 시 **0초 즉시 이동**합니다.
 {% endtab %}
 {% endtabs %}
+
+---
+
+## 🛠️ 랭크 해금 유틸리티 및 특수 편의 기능
+
+랭크 승급을 통해 단계별로 해금되는 5대 핵심 유틸리티와 휴대용 가상 도구들의 상세 가이드입니다.
+
+### 1. 🌟 5대 핵심 유틸리티 (`/유틸리티` - 자유 토글)
+
+채팅창에 **/유틸리티** (또는 `/유틸`, `/utility`)를 입력하면 해금된 편의 기능을 언제든 자유롭게 켜고 끌(On/Off) 수 있는 설정 창이 열립니다.
+
+<table>
+  <thead>
+    <tr>
+      <th width="180">명령어</th>
+      <th width="200">별칭 (Alias)</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>/utility</strong></td>
+      <td><code>/유틸리티</code>, <code>/유틸</code>, <code>/dbxlf</code></td>
+      <td>자동 줍기, 자동 조합, 자동 심기, 작물 보호, 전리품 가방 토글 설정 창을 엽니다.</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure><img src="../../.gitbook/assets/1028_renewal/util.png" alt="유틸리티 설정 GUI"><figcaption></figcaption></figure>
+
+<table>
+  <thead>
+    <tr>
+      <th width="140">편의 기능</th>
+      <th align="center" width="130">해금 등급</th>
+      <th>기능 설명 및 상세 안내</th>
+      <th width="240">참고 사항</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>자동 줍기</strong></td>
+      <td align="center"><mark style="color:orange;"><strong>산호 등급</strong></mark><br>(총합 150Lv)</td>
+      <td>블록을 캐거나 몬스터를 처치했을 때 드롭된 아이템이 바닥에 떨어지지 않고 <strong>인벤토리로 즉시 자동 수납됩니다.</strong></td>
+      <td>인벤토리 공간 부족 시 바닥에 정상 드롭됩니다.</td>
+    </tr>
+    <tr>
+      <td><strong>전리품 가방</strong></td>
+      <td align="center"><mark style="color:orange;"><strong>산호 등급</strong></mark><br>(총합 150Lv)</td>
+      <td>광물, 농작물 등 지정된 전리품을 인벤토리 슬롯 대신 <strong>무제한급 가상 창고에 자동으로 차곡차곡 적립</strong>합니다.<br>• <strong>가방 열기</strong>: <code>/전리품가방</code> (또는 <code>/lootbag</code>)</td>
+      <td>GUI 창을 열어 보관된 전리품을 원하는 만큼 언제든 인벤토리로 꺼낼 수 있습니다.</td>
+    </tr>
+    <tr>
+      <td><strong>자동 조합</strong></td>
+      <td align="center"><mark style="color:yellow;"><strong>골드 등급</strong></mark><br>(총합 300Lv)</td>
+      <td>인벤토리에 광물이나 작물이 9개 모이면 <strong>작업대 없이 인벤토리 안에서 자동으로 압축 블록으로 변환</strong>됩니다.</td>
+      <td>채광 및 대규모 농사 시 인벤토리 슬롯 부족을 방지합니다.</td>
+    </tr>
+    <tr>
+      <td><strong>자동 심기</strong></td>
+      <td align="center"><mark style="color:green;"><strong>에메랄드 등급</strong></mark><br>(총합 500Lv)</td>
+      <td><strong>① 농작물</strong>: 다 자란 밀, 당근, 감자 등을 캐면 인벤토리의 씨앗을 소모해 그 자리에 즉시 다시 심어줍니다.<br><strong>② 나무 묘목</strong>: 흙 위에 자란 나무의 맨 밑동 원목을 베면 인벤토리의 해당 묘목을 소모해 <strong>나무가 있던 자리에 자동으로 묘목을 심어줍니다!</strong></td>
+      <td>수확 또는 벌목 시 인벤토리 내 씨앗/묘목이 소모됩니다.</td>
+    </tr>
+    <tr>
+      <td><strong>작물 보호</strong></td>
+      <td align="center"><mark style="color:green;"><strong>에메랄드 등급</strong></mark><br>(총합 500Lv)</td>
+      <td>덜 자란 미성숙 작물 및 줄기 블록의 좌클릭 실수 파괴를 방지합니다.</td>
+      <td>밭을 다시 갈아엎고 싶을 때는 <strong><code>Shift(웅크리기) + 좌클릭</code></strong>을 하면 보호를 풀고 강제로 부술 수 있습니다!</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+### 2. 🧰 휴대용 가상 도구 및 원격 보관함
+
+작업대나 모루, 엔더상자를 찾아 스폰이나 거점으로 돌아갈 필요 없이 언제 어디서나 손안에서 창을 엽니다.
+
+<table>
+  <thead>
+    <tr>
+      <th width="180">명령어 / 조작법</th>
+      <th width="200">별칭 (Alias)</th>
+      <th align="center" width="130">해금 등급</th>
+      <th>상세 설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>/ct</strong></td>
+      <td><code>/작업대</code>, <code>/table</code>, <code>/craft</code></td>
+      <td align="center"><mark style="color:orange;"><strong>산호 등급</strong></mark></td>
+      <td>바닥 설치 필요 없이 3×3 작업대 창을 즉시 엽니다.</td>
+    </tr>
+    <tr>
+      <td><strong>/ender</strong></td>
+      <td><code>/엔더상자</code>, <code>/enderchest</code>, <code>/엔더</code></td>
+      <td align="center"><mark style="color:orange;"><strong>산호 등급</strong></mark></td>
+      <td>어디서든 개인 엔더 상자 보관함을 즉시 엽니다.</td>
+    </tr>
+    <tr>
+      <td><strong>/모루</strong></td>
+      <td><code>/anvil</code>, <code>/ahfn</code></td>
+      <td align="center"><mark style="color:orange;"><strong>산호 등급</strong></mark></td>
+      <td>설치형 모루 없이 휴대용 수리/결합 모루 창을 즉시 엽니다.</td>
+    </tr>
+    <tr>
+      <td><strong>Shift + 좌클릭</strong></td>
+      <td><em>(셜커 상자 손에 든 상태)</em></td>
+      <td align="center"><mark style="color:blue;"><strong>사파이어 등급</strong></mark></td>
+      <td>셜커 상자를 바닥에 설치하지 않고 손에 든 채로 27칸 상자 인벤토리를 원격으로 즉시 엽니다.</td>
+    </tr>
+  </tbody>
+</table>
