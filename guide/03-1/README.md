@@ -25,7 +25,7 @@
     <tr>
       <th width="150">화폐 명칭</th>
       <th width="160">확인 명령어</th>
-      <th width="180">별칭 (Alias)</th>
+      <th width="180">단축 명령어</th>
       <th>설명 및 주요 획득처</th>
     </tr>
   </thead>
@@ -99,7 +99,7 @@
   <thead>
     <tr>
       <th width="160">명령어</th>
-      <th width="180">별칭 (Alias)</th>
+      <th width="180">단축 명령어</th>
       <th width="240">사용 형식</th>
       <th>설명</th>
     </tr>
@@ -142,7 +142,7 @@
   <thead>
     <tr>
       <th width="160">명령어</th>
-      <th width="150">별칭 (Alias)</th>
+      <th width="150">단축 명령어</th>
       <th width="240">사용 형식</th>
       <th>설명</th>
     </tr>
@@ -182,7 +182,7 @@
   <thead>
     <tr>
       <th width="160">명령어</th>
-      <th width="150">별칭 (Alias)</th>
+      <th width="150">단축 명령어</th>
       <th width="240">사용 형식</th>
       <th>설명</th>
     </tr>
@@ -229,7 +229,7 @@
   <thead>
     <tr>
       <th width="160">명령어</th>
-      <th width="180">별칭 (Alias)</th>
+      <th width="180">단축 명령어</th>
       <th>설명</th>
     </tr>
   </thead>
